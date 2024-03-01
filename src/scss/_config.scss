@@ -31,6 +31,8 @@ $font-sizes: (
   small: clamp(10px, 1.5vw, 12px)
 );
 
+
+
 @function fontSize($font-size-name) {
   @return map-get($font-sizes, $font-size-name);
 }
@@ -45,6 +47,13 @@ $font-sizes: (
 
 @function fontWeight($weight-name) {
   @return map-get($font-weights, $weight-name);
+}
+
+@mixin Flex($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
 }
 
 @mixin media-screen {

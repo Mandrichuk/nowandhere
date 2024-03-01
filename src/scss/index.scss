@@ -1,5 +1,14 @@
 @import "config";
 @import "responsive";
+@import "contactForm";
+@import "getInTouch";
+@import "logo";
+@import "whatWeDo";
+@import "whoWeAre";
+@import "services";
+@import "lastProject";
+@import "introduction";
+
 
 html {
   scroll-behavior: smooth;
@@ -7,14 +16,26 @@ html {
 }
 
 body {
+  @include Flex(column, center, center);
+  width: 100%;
   background-color: color(primary);
-  font-size: fontSize(p);
   font-weight: fontWeight(regular);
+  font-size: fontSize(p);
   box-sizing: 0;
   margin: 0;
   padding: 0;
   line-height: 1;
-  font-style: italic;
+
+  #root {
+    width: $wrapper-width;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+
+    section {
+      width: 100%;
+    }
+  }
 }
 
 a {
