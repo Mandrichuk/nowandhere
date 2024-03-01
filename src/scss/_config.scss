@@ -1,0 +1,54 @@
+$wrapper-width: 98%;
+$max-width: 1440px;
+$colors: (
+  primary: #333333,
+  pink: #e295bd,
+  pink-gray: #1c1718,
+  blue: #2200e2,
+  yellow: #fef073,
+  dark-gray: #18181a,
+  yellow-gray: #181612,
+  purple: #7571bf,
+  white: #a50808
+);
+$border-radius: (
+  mobile: 40px,
+  screen: 75px
+);
+$font-weights: (
+  regular: 400,
+  medium: 500,
+  semibold: 600,
+  bold: 700
+);
+$font-sizes: (
+  h1: clamp(50px, 2.5vw, 130px),
+  h2: clamp(40px, 2.5vw, 70px),
+  h3: clamp(50px, 2.5vw, 100px),
+  p: clamp(12px, 1.5vw, 16px),
+  introductionIcon: clamp(12px, 1.5vw, 20px),
+  serviceIcon: clamp(37px, 1.5vw, 55px),
+  small: clamp(10px, 1.5vw, 12px)
+);
+
+@function fontSize($font-size-name) {
+  @return map-get($font-sizes, $font-size-name);
+}
+
+@function borderRadius($border-name) {
+  @return map-get($border-radius, $border-name);
+}
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+@function fontWeight($weight-name) {
+  @return map-get($font-weights, $weight-name);
+}
+
+@mixin media-screen {
+  @media screen and (min-width: 490px) {
+    @content;
+  }
+}
