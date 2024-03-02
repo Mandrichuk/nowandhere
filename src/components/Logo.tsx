@@ -1,11 +1,27 @@
 import React from "react";
 
 import { LogoProps } from "../lib/interfaces";
+import { ColorizeSubstringProps } from "../lib/types";
+
+import { LogoText } from "../constants/index";
+
+import { toUpperCase } from "../utils/toUpperCase";
 
 function Logo({ lang }: LogoProps) {
+  const nameProps: ColorizeSubstringProps = {
+    text: LogoText.name,
+    color: "red",
+  };
+
   return (
     <section id="Logo" className="Logo">
-      Logo
+      <div id="logoName" className="name">
+        {LogoText.name}
+      </div>
+      <div data-anchor="logoName" className="article">
+        {toUpperCase(LogoText.article)}
+      </div>
+      <div data-anchor="logoName" className="label">{LogoText.label}</div>
     </section>
   );
 }

@@ -1,11 +1,12 @@
 $wrapper-width: 98%;
 $max-width: 1440px;
 $colors: (
-  primary: #333333,
+  primary: #000000,
   pink: #e295bd,
   pink-gray: #1c1718,
   blue: #2200e2,
   yellow: #fef073,
+  gray: #4a4a4a,
   dark-gray: #18181a,
   yellow-gray: #181612,
   purple: #7571bf,
@@ -23,8 +24,8 @@ $font-weights: (
 );
 $font-sizes: (
   h1: clamp(50px, 2.5vw, 130px),
-  h2: clamp(40px, 2.5vw, 70px),
-  h3: clamp(50px, 2.5vw, 100px),
+  h2: clamp(50px, 2.5vw, 100px),
+  h3: clamp(40px, 2.5vw, 70px),
   p: clamp(12px, 1.5vw, 16px),
   introductionIcon: clamp(12px, 1.5vw, 20px),
   serviceIcon: clamp(37px, 1.5vw, 55px),

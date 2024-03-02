@@ -20,14 +20,14 @@ function Page() {
   };
   return (
     <>
-      <ContactForm lang={lang} />
-      <GetInTouch lang={lang} />
-      <Introduction lang={lang} />
-      <LastProject lang={lang} />
       <Logo lang={lang} changeLang={changeLang} />
-      <Services lang={lang} />
+      <Introduction lang={lang} />
       <WhatWeDo lang={lang} />
+      <Services lang={lang} />
+      <LastProject lang={lang} />
       <WhoWeAre lang={lang} />
+      <GetInTouch lang={lang} />
+      <ContactForm lang={lang} />
     </>
   );
 }

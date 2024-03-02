@@ -1,0 +1,27 @@
+.Logo {
+  @include Flex(column, center, center);
+  color: white;
+  margin: 6rem 0;
+
+  .name {
+    font-size: fontSize(h3);
+    font-weight: fontWeight(bold);
+  }
+
+  .article {
+    position: absolute;
+    font-size: 15px;
+    font-weight: fontWeight(bold);
+    margin-bottom: 40px;
+    margin-right: 120px;
+  }
+
+  .label {
+    color: color(gray);
+    font-weight: fontWeight(semibold);
+    position: absolute;
+    font-size: 20px;
+    margin-top: 50px;
+    margin-left: 125px;
+  }
+}
