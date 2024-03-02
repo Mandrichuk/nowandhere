@@ -3,7 +3,7 @@ import React from "react";
 import { LogoProps } from "../lib/interfaces";
 import { ColorizeSubstringProps } from "../lib/types";
 
-import { LogoText } from "../constants/index";
+import { LogoText } from "../constants/Index";
 
 import { toUpperCase } from "../utils/toUpperCase";
 

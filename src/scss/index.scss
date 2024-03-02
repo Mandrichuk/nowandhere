@@ -9,6 +9,16 @@
 @import "lastProject";
 @import "introduction";
 
+::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 html {
   scroll-behavior: smooth;
   font-family: "Inter", sans-serif;
@@ -21,9 +31,6 @@ body {
   background-color: color(primary);
   font-weight: fontWeight(regular);
   font-size: fontSize(p);
-  box-sizing: 0;
-  margin: 0;
-  padding: 0;
   line-height: 1;
 
   #root {
@@ -31,7 +38,7 @@ body {
     width: $wrapper-width;
     display: grid;
     grid-template-columns: 1fr;
-    gap: 10px;
+    gap: $gap;
 
     section {
       width: 100%;
@@ -41,4 +48,18 @@ body {
 
 a {
   text-decoration: none;
+}
+
+.container {
+  border-radius: borderRadius(mobile);
+}
+
+.inner-padding {
+  padding: innerPadding(mobile);
+  width: 100%;
+  height: 100%;
+}
+
+.svg-icon {
+  fill: red;
 }

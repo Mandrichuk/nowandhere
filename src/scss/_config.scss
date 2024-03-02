@@ -1,20 +1,29 @@
-$wrapper-width: 98%;
+$wrapper-width: 100%;
+$section-margin: 5px;
 $max-width: 1440px;
+$transition: all 0.3s ease-in-out;
+$animation-time:  5s;
+$gap: 15px;
+$inner-padding: (
+  mobile: 25px,
+  screen: 15px
+);
 $colors: (
+  custom-white: #FDFDFC,
   primary: #000000,
-  pink: #e295bd,
-  pink-gray: #1c1718,
-  blue: #2200e2,
-  yellow: #fef073,
-  gray: #4a4a4a,
-  dark-gray: #18181a,
-  yellow-gray: #181612,
-  purple: #7571bf,
-  white: #a50808
+  custom-pink: #e295bd,
+  custom-pink-gray: #1c1718,
+  custom-blue: #2200e2,
+  custom-yellow: #fef073,
+  custom-gray: #4a4a4a,
+  custom-dark-gray: #18181a,
+  custom-yellow-gray: #181612,
+  custom-purple: #7571bf,
+  custom-red: #a50808
 );
 $border-radius: (
   mobile: 40px,
-  screen: 75px
+  screen: 25px,
 );
 $font-weights: (
   regular: 400,
@@ -23,16 +32,26 @@ $font-weights: (
   bold: 700
 );
 $font-sizes: (
-  h1: clamp(50px, 2.5vw, 130px),
-  h2: clamp(50px, 2.5vw, 100px),
-  h3: clamp(40px, 2.5vw, 70px),
-  p: clamp(12px, 1.5vw, 16px),
+  h1: clamp(60px, 2vw, 130px),
+  h2: clamp(50px, 2vw, 100px),
+  h3: clamp(40px, 2vw, 70px),
+  p: clamp(10px, 1.5vw, 12px),
   introductionIcon: clamp(12px, 1.5vw, 20px),
   serviceIcon: clamp(37px, 1.5vw, 55px),
-  small: clamp(10px, 1.5vw, 12px)
+  small: clamp(7px, 1.5vw, 9px)
+);
+$icon-sizes: (
+  mobile: 30px,
+  screen: 50px
 );
 
+@function iconSizes($icon-size-name) {
+  @return map-get($icon-sizes, $icon-size-name);
+}
 
+@function innerPadding($inner-padding-name) {
+  @return map-get($inner-padding, $inner-padding-name);
+}
 
 @function fontSize($font-size-name) {
   @return map-get($font-sizes, $font-size-name);
@@ -50,15 +69,15 @@ $font-sizes: (
   @return map-get($font-weights, $weight-name);
 }
 
-@mixin Flex($direction, $justify, $align) {
+@mixin Flex($direction, $align, $justify) {
   display: flex;
   flex-direction: $direction;
-  justify-content: $justify;
   align-items: $align;
+  justify-content: $justify;
 }
 
 @mixin media-screen {
-  @media screen and (min-width: 490px) {
+  @media (min-width: 850px) {
     @content;
   }
 }

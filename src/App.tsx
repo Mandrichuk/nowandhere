@@ -18,6 +18,7 @@ function Page() {
   const changeLang = (newLang: "en" | "ru" | "sk" | "de"): void => {
     setLang(newLang);
   };
+
   return (
     <>
       <Logo lang={lang} changeLang={changeLang} />
