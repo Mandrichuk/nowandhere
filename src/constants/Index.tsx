@@ -1,4 +1,4 @@
-import { type LogoProps, type IntroductionProps } from "../lib/types";
+import { type LogoProps, type IntroductionProps, type WhatWeDoProps } from "../lib/types";
 
 export const images = {
   circle: (
@@ -87,6 +87,13 @@ export const images = {
     </svg>
   ),
   ourservices: (
+    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+      <g id="Layer_5" data-name="Layer 5">
+        <path d="m22.11 17.87a1 1 0 0 0 -1.42 0l-3.69 3.69v-13.56a1 1 0 0 0 -2 0v13.56l-3.69-3.69a1 1 0 0 0 -1.42 0 1 1 0 0 0 0 1.41l5.4 5.4a1 1 0 0 0 .32.22 1 1 0 0 0 .78 0 1 1 0 0 0 .32-.22l5.4-5.4a1 1 0 0 0 0-1.41z" />
+      </g>
+    </svg>
+  ),
+  arrowDown: (
     <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
       <g id="Layer_5" data-name="Layer 5">
         <path d="m22.11 17.87a1 1 0 0 0 -1.42 0l-3.69 3.69v-13.56a1 1 0 0 0 -2 0v13.56l-3.69-3.69a1 1 0 0 0 -1.42 0 1 1 0 0 0 0 1.41l5.4 5.4a1 1 0 0 0 .32.22 1 1 0 0 0 .78 0 1 1 0 0 0 .32-.22l5.4-5.4a1 1 0 0 0 0-1.41z" />
@@ -289,5 +296,26 @@ export const IntroductionText: IntroductionProps = {
       runningText: "Свяжитесь с нами. Напишите нам",
       icon: images.contactus,
     },
+  },
+};
+
+export const WhatWeDoText: WhatWeDoProps = {
+  en: {
+    name: "What we do",
+    title:
+      "We provide clients with stunning - Crafty- solutions, developed with -skill- & -passion-",
+    circle: {
+      text: "services • services •",
+      icon: images.arrowDown,
+    },
+  },
+  ru: {
+    name: "Чем мы занимаемся",
+    title:
+      "Мы предоставляем клиентам стильные, - Креативные- сайты, разработанные с -умением- и -энтузиазмом-",
+    circle: {
+      text: "услуги • услуги •",
+      icon: images.arrowDown,
+    }
   },
 };

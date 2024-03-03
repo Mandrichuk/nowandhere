@@ -36,9 +36,6 @@ body {
   #root {
     max-width: $max-width;
     width: $wrapper-width;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: $gap;
 
     section {
       width: 100%;
@@ -51,7 +48,7 @@ a {
 }
 
 .container {
-  border-radius: borderRadius(mobile);  
+  border-radius: borderRadius(mobile);
   transition: $transition;
 }
 

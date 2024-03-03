@@ -19,7 +19,7 @@ $colors: (
   custom-gray: #4a4a4a,
   custom-dark-gray: #18181a,
   custom-yellow-gray: #181612,
-  custom-purple: #7571bf,
+  custom-purple: #8985E0,
   custom-red: #a50808
 );
 $border-radius: (
@@ -27,13 +27,14 @@ $border-radius: (
   screen: 70px,
 );
 $font-weights: (
+  thin: 300,
   regular: 400,
   medium: 500,
   semibold: 600,
   bold: 700
 );
 $font-sizes: (
-  h1: clamp(60px, 2.5vw, 130px),
+  h1: clamp(70px, 2.5vw, 130px),
   h2: clamp(50px, 2.5vw, 100px),
   h3: clamp(40px, 2.5vw, 70px),
   p: clamp(14px, 1.5vw, 14px),

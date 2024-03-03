@@ -44,3 +44,21 @@ export type IntroductionProps = {
   sk?: IntroductionContent;
   de?: IntroductionContent;
 };
+
+type Circle = {
+  icon: React.ReactNode;
+  text: string;
+}
+
+type WhatWeDoContent = {
+  name: string;
+  title: string;
+  circle: Circle;
+}
+
+export type WhatWeDoProps = {
+  en: WhatWeDoContent;
+  ru: WhatWeDoContent;
+  sk?: WhatWeDoContent;
+  de?: WhatWeDoContent;
+};

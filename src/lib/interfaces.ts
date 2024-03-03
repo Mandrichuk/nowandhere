@@ -28,3 +28,10 @@ export interface WhoWeAreProps extends Language {}
 export interface WhatWeDoProps extends Language {}
 
 export interface ServicesProps extends Language {}
+
+
+export interface RoundedTextProps {
+  children: string;
+  color: string;
+  icon: string;
+}
