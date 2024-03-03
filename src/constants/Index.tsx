@@ -247,7 +247,7 @@ export const IntroductionText: IntroductionProps = {
       icon: images.ourservices,
     },
     ourLastProject: {
-      title: "Our last project",
+      title: "Last project",
       runningText: "View our showcases",
       icon: images.work,
     },
@@ -275,7 +275,7 @@ export const IntroductionText: IntroductionProps = {
       icon: images.ourservices,
     },
     ourLastProject: {
-      title: "Наш последний проект",
+      title: "Последний проект",
       runningText: "Посмотрите наши работы",
       icon: images.work,
     },

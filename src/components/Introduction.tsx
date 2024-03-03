@@ -12,7 +12,10 @@ function Introduction({ lang }: IntroductionProps) {
   return (
     <section id="IntroductionSection" className="IntroductionSection">
       <div id="servicesContainer" className="servicesContainer">
-        <div id="container-introduction" className="container container-introduction">
+        <div
+          id="container-introduction"
+          className="container container-introduction"
+        >
           <div className="inner-padding inner-padding-introduction">
             <p className="name">{introductionText.ourServices.name}</p>
 
@@ -62,6 +65,9 @@ function Introduction({ lang }: IntroductionProps) {
                 </div>
               </div>
             </div>
+            <div data-anchor="lastProjectContainer" className="clickText">
+              Click
+            </div>
           </div>
 
           <div id="aboutUsContainer" className="aboutUsContainer">
@@ -80,6 +86,9 @@ function Introduction({ lang }: IntroductionProps) {
                   <p className="title">{introductionText.aboutUs.title}</p>
                 </div>
               </div>
+            </div>
+            <div data-anchor="aboutUsContainer" className="clickText">
+              Click
             </div>
           </div>
         </div>
@@ -100,6 +109,9 @@ function Introduction({ lang }: IntroductionProps) {
                 <p className="title">{introductionText.contactUs.title}</p>
               </div>
             </div>
+          </div>
+          <div data-anchor="lastProjectContainer" className="clickText">
+            Click
           </div>
         </div>
       </div>

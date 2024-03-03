@@ -34,6 +34,7 @@
 
             .name {
               font-size: calc(fontSize(p) + 3px);
+              padding: 5px 10px;
             }
 
             .running-text {
@@ -47,6 +48,7 @@
             }
 
             .details {
+              padding: 0 10px;
               width: 100%;
               @include Flex(row, center, space-between);
 
@@ -160,10 +162,9 @@
               background-color: color(custom-white);
 
               .inner-padding {
-                @include Flex(column, center, end);
+                @include Flex(column, center, space-between);
 
                 .running-text {
-                  display: none;
                   opacity: 0;
                   overflow: hidden;
                   white-space: nowrap;
@@ -176,6 +177,7 @@
                 .details {
                   width: 100%;
                   @include Flex(row, center, space-between);
+                  transition: $fast-transition;
 
                   .title {
                     font-weight: fontWeight(semibold);
@@ -190,6 +192,29 @@
                     }
                   }
                 }
+              }
+            }
+            .clickText {
+              opacity: 0;
+              font-weight: fontWeight(semibold);
+              font-size: fontSize(h2);
+              transition: $transition;
+            }
+
+            &:hover {
+              .container {
+                .inner-padding {
+                  @include Flex(column, center, space-between);
+
+                  .details {
+                    opacity: 0;
+                    transform: scale(0.5);
+                  }
+                }
+              }
+              .clickText {
+                opacity: 0.4;
+                transform: scale(1.1);
               }
             }
           }
@@ -211,7 +236,7 @@
               background-color: color(custom-dark-gray);
 
               .inner-padding {
-                @include Flex(column, center, center);
+                @include Flex(column, center, end);
 
                 .running-text {
                   display: none;
@@ -226,7 +251,8 @@
 
                 .details {
                   width: 100%;
-                  @include Flex(column, center, center);
+                  @include Flex(row, center, space-between);
+                  transition: $fast-transition;
 
                   .title {
                     font-weight: fontWeight(regular);
@@ -242,6 +268,29 @@
                     }
                   }
                 }
+              }
+            }
+            .clickText {
+              opacity: 0;
+              position: absolute;
+              font-weight: fontWeight(regular);
+              font-size: fontSize(h2);
+              transition: $transition;
+            }
+            &:hover {
+              .container {
+                .inner-padding {
+                  @include Flex(column, center, space-between);
+
+                  .details {
+                    opacity: 0;
+                    transform: scale(0.5);
+                  }
+                }
+              }
+              .clickText {
+                opacity: 0.4;
+                transform: scale(1.1);
               }
             }
           }
@@ -264,7 +313,7 @@
           background-color: color(custom-yellow);
 
           .inner-padding {
-            @include Flex(column, center, center);
+            @include Flex(column, center, end);
 
             .running-text {
               display: none;
@@ -273,13 +322,14 @@
               white-space: nowrap;
               font-size: fontSize(h1);
               animation: runningTextAnimation $animation-time linear infinite;
-              font-weight: fontWeight(semibold);
+              font-weight: fontWeight(bold);
               transition: $transition;
             }
 
             .details {
               width: 100%;
-              @include Flex(column, center, center);
+              @include Flex(row, center, space-between);
+              transition: $fast-transition;
 
               .title {
                 font-weight: fontWeight(bold);
@@ -296,6 +346,29 @@
                 }
               }
             }
+          }
+        }
+        .clickText {
+          opacity: 0;
+          position: absolute;
+          font-weight: fontWeight(bold);
+          font-size: fontSize(h1);
+          transition: $transition;
+        }
+        &:hover {
+          .container {
+            .inner-padding {
+              @include Flex(column, center, space-between);
+
+              .details {
+                opacity: 0;
+                transform: scale(0.5);
+              }
+            }
+          }
+          .clickText {
+            transform: scale(1.1);
+            opacity: 0.4;
           }
         }
       }

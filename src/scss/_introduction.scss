@@ -176,6 +176,12 @@
             }
           }
         }
+        .clickText {
+          opacity: 0;
+          position: absolute;
+          font-weight: fontWeight(semibold);
+          font-size: fontSize(h2);
+        }
       }
 
       .aboutUsContainer {
@@ -227,6 +233,12 @@
               }
             }
           }
+        }
+        .clickText {
+          opacity: 0;
+          position: absolute;
+          font-weight: fontWeight(semibold);
+          font-size: fontSize(h2);
         }
       }
     }
@@ -281,6 +293,12 @@
           }
         }
       }
+    }
+    .clickText {
+      opacity: 0;
+      position: absolute;
+      font-weight: fontWeight(semibold);
+      font-size: fontSize(h2);
     }
   }
 }
