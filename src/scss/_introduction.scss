@@ -1,4 +1,5 @@
 .IntroductionSection {
+  cursor: pointer;
   overflow: hidden;
 
   .servicesContainer {
@@ -123,6 +124,7 @@
   }
 
   .secondSection {
+    cursor: pointer;
     flex: 1;
     .fastLinks {
       @include Flex(row, center, center);
@@ -185,6 +187,7 @@
       }
 
       .aboutUsContainer {
+        cursor: pointer;
         margin: $section-margin;
         flex: 1;
         aspect-ratio: 1 / 1;
@@ -245,6 +248,7 @@
   }
 
   .contactUsContainer {
+    cursor: pointer;
     margin: $section-margin;
     flex: 1;
     aspect-ratio: 1 / 0.5;

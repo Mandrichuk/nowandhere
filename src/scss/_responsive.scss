@@ -2,6 +2,9 @@
   #root {
     .container {
       border-radius: borderRadius(screen);
+      &:hover {
+        transform: scale(0.99);
+      }
     }
 
     .inner-padding {

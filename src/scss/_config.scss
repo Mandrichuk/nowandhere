@@ -78,7 +78,7 @@ $icon-sizes: (
 }
 
 @mixin media-screen {
-  @media (min-width: 950px) {
+  @media (min-width: 850px) {
     @content;
   }
 }

@@ -51,7 +51,8 @@ a {
 }
 
 .container {
-  border-radius: borderRadius(mobile);
+  border-radius: borderRadius(mobile);  
+  transition: $transition;
 }
 
 .inner-padding {
