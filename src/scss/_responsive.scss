@@ -378,122 +378,198 @@
     }
 
     .WhatWeDo {
-      @include Flex(column, start, start);
-      padding: $section-margin;
-      background-color: color(custom-dark-gray);
-      color: color(custom-purple);
+      width: 100%;
+      .coverContainer {
+        @include Flex(column, start, start);
+        padding: $section-margin;
+        background-color: color(custom-dark-gray);
+        color: color(custom-purple);
+        border-radius: borderRadius(screen);
 
-      .name {
-        font-size: fontSize(small);
-        font-weight: fontWeight(regular);
-        letter-spacing: 0.05em;
-      }
-
-      .title {
-        margin: 30px 0;
-        max-width: 50%;
-        font-size: fontSize(h1);
-        font-weight: fontWeight(regular);
-        letter-spacing: 0.05em;
-      }
-
-      .circle {
-        width: 100%;
-        @include Flex(row, center, end);
-
-        .text {
-          font-size: fontSize(regular);
-          font-weight: fontWeight(thin);
+        .name {
+          font-size: fontSize(small);
+          font-weight: fontWeight(regular);
+          letter-spacing: 0.05em;
         }
 
-        .icon {
-          width: iconSizes(mobile);
+        .title {
+          margin: 30px 0;
+          max-width: 50%;
+          font-size: fontSize(h1);
+          font-weight: fontWeight(regular);
+          letter-spacing: 0.05em;
+        }
 
-          svg {
-            fill: color(custom-purple);
+        .circle {
+          width: 100%;
+          @include Flex(row, center, end);
+
+          .text {
+            font-size: fontSize(regular);
+            font-weight: fontWeight(thin);
+          }
+
+          .icon {
+            width: iconSizes(mobile);
+
+            svg {
+              fill: color(custom-purple);
+            }
           }
         }
       }
     }
 
     .Services {
-      margin: $section-margin;
-      @include Flex(column, center, space-between);
+      width: 100%;
+      .coverContainer {
+        margin: $section-margin;
+        @include Flex(column, center, space-between);
 
-      .wrapper {
-        width: 100%;
-        margin: $section-margin 0;
-        @include Flex(row, center, space-between);
-        aspect-ratio: 1 / 0.25;
+        .wrapper {
+          width: 100%;
+          margin: $section-margin 0;
+          @include Flex(row, center, space-between);
+          aspect-ratio: 1 / 0.25;
 
-        .description {
-          height: 100%;
+          .description {
+            height: 100%;
 
-          color: color(custom-purple);
-          border-radius: borderRadius(mobile);
-          background-color: color(custom-dark-gray);
-          flex: 1;
+            color: color(custom-purple);
+            border-radius: borderRadius(mobile);
+            background-color: color(custom-dark-gray);
+            flex: 1;
 
-          .inner-padding {
-            @include Flex(row, center, center);
-            .icon {
-              display: block;
-              min-width: iconSizes(screen);
-              margin-right: 20px;
-              // flex: 1
+            .inner-padding {
+              @include Flex(row, center, center);
+              .icon {
+                display: block;
+                min-width: iconSizes(screen);
+                margin-right: 20px;
+                // flex: 1
 
-              svg {
-                fill: color(custom-purple);
+                svg {
+                  fill: color(custom-purple);
+                }
+              }
+
+              .text {
+                .title {
+                  font-weight: fontWeight(regular);
+                  font-size: calc(fontSize(p) + 3px);
+                  margin-bottom: 25px;
+                }
+
+                .article {
+                  font-size: fontSize(regular);
+                  line-height: 1.5;
+                }
               }
             }
+          }
 
-            .text {
-              .title {
-                font-weight: fontWeight(regular);
-                font-size: calc(fontSize(p) + 3px);
-                margin-bottom: 25px;
+          .statement {
+            @include Flex(column, center, center);
+            height: 100%;
+            background-color: color(custom-purple);
+            color: color(custom-dark-gray);
+            border-radius: borderRadius(mobile);
+            flex: 1;
+
+            .inner-padding {
+              @include Flex(column, center, center);
+              .icon {
+                width: iconSizes(mobile);
+                display: none;
+
+                svg {
+                  fill: color(custom-dark-gray);
+                }
               }
 
-              .article {
-                font-size: fontSize(regular);
-                line-height: 1.5;
+              .clarification,
+              .title {
+                display: block;
+              }
+              .clarification {
+                font-weight: fontWeight(semibold);
+                font-size: calc(fontSize(p) + 3px);
+                margin-bottom: 20px;
+              }
+              .title {
+                font-weight: fontWeight(bold);
+                font-size: fontSize(h4);
               }
             }
           }
         }
+      }
+    }
 
-        .statement {
-          @include Flex(column, center, center);
+    .LastProject {
+      width: 100%;
+      .coverContainer {
+        // aspect-ratio: 1 / 0.7;
+        @include Flex(column, center, center);
+        margin: $section-margin;
+        background-color: color(custom-white);
+        border-radius: borderRadius(mobile);
+        color: color(custom-dark-gray);
+
+        .project {
+          @include Flex(column, start, center);
           height: 100%;
-          background-color: color(custom-purple);
-          color: color(custom-dark-gray);
-          border-radius: borderRadius(mobile);
-          flex: 1;
+          .number {
+            font-size: fontSize(p);
+            font-weight: fontWeight(bold);
+          }
 
-          .inner-padding {
-            @include Flex(column, center, center);
-            .icon {
-              width: iconSizes(mobile);
-              display: none;
+          .projectDetails {
+            margin: 1.5rem 0 1.5rem 0;
+            height: 100%;
+            width: 100%;
+            @include Flex(row, center, center);
 
-              svg {
-                fill: color(custom-dark-gray);
+            .text {
+              margin-right: 10%;
+              @include Flex(column, center, center);
+              margin-bottom: 0;
+
+              .title {
+                font-weight: fontWeight(semibold);
+                font-size: fontSize(h4);
+                margin-bottom: 20px;
+              }
+
+              .name {
+                font-weight: fontWeight(bold);
+                font-size: fontSize(h1);
+                color: color(custom-red);
+              }
+
+              .description {
+                font-weight: fontWeight(bold);
+                font-size: calc(fontSize(p) + 3px);
+                color: color(custom-red);
+                position: absolute;
+                margin: 140px 0 0 210px;
               }
             }
 
-            .clarification,
-            .title {
-              display: block;
+            .logo {
+              width: 200px;
+              margin-left: 10%;
+
+              img {
+                width: 100%;
+                object-fit: cover;
+              }
             }
-            .clarification {
-              font-weight: fontWeight(semibold);
-              font-size: calc(fontSize(p) + 3px);
-              margin-bottom: 20px;
-            }
-            .title {
-              font-weight: fontWeight(bold);
-              font-size: fontSize(h4);
-            }
+          }
+
+          .launch {
+            font-size: fontSize(p);
+            font-weight: fontWeight(bold);
           }
         }
       }

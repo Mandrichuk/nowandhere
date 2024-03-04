@@ -2,12 +2,11 @@ import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 
 import { ServicesProps } from "../lib/interfaces";
-import { DescriptionProps } from "../lib/types";
-
+import { DescriptionProps, StatementProps } from "../lib/types";
+import { OurServicesText as OurServicesConstant } from "../constants/Index";
 import { toUpperCase } from "../utils/toUpperCase";
 import italicText from "../utils/italicText";
-
-import { OurServicesText as OurServicesConstant } from "../constants/Index";
+import { useWindowWidth } from "../utils/useWindowWidth";
 
 function Services({ lang }: ServicesProps) {
   const servicesText =
@@ -16,23 +15,14 @@ function Services({ lang }: ServicesProps) {
 
   return (
     <section id="Services" className="Services">
+      <div className="coverContainer">
       {servicesText.services.map((service, index) => (
-        <div className="wrapper" key={index}>
-          <Description {...service} />
-          <div className="statement">
-            <div className="inner-padding">
-              <div className="icon">{service.icon}</div>
-              <p className="clarification">{service.clarification}</p>
-              <h3
-                className="title"
-                dangerouslySetInnerHTML={{
-                  __html: italicText(service.statement),
-                }}
-              />
-            </div>
-          </div>
+        <div className="wrapper" key={`wrapper-${index}`}>
+          <Description {...service} key={`description-${index}`} />
+          <Statement {...service} key={`statement-${index}`} />
         </div>
       ))}
+      </div>
     </section>
   );
 }
@@ -44,36 +34,33 @@ function Description({
   clarification,
 }: DescriptionProps) {
   const [isVisible, setIsVisible] = useState<boolean>(false);
-  const containerRef = useRef(null);
+  const containerRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            setIsVisible(true);
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.5 } 
-    );
+    const handleScroll = () => {
+      const element = containerRef.current;
+      if (!element) return;
 
-    if (containerRef.current) {
-      observer.observe(containerRef.current);
-    }
+      const top = element.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
 
+      const shouldBeVisible = top < windowHeight * 0.75;
+
+      setIsVisible(shouldBeVisible);
+    };
+
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      if (containerRef.current) {
-        observer.unobserve(containerRef.current);
-      }
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const initialX = isVisible ? 0 : "+25vw";
 
   return (
     <motion.div
       className="description"
-      initial={{ x: isVisible ? 0 : "+25vw" }}
+      initial={{ x: initialX }}
       animate={{ x: isVisible ? 0 : "+25vw" }}
       transition={{ type: "spring", stiffness: 100, damping: 15 }}
       ref={containerRef}
@@ -87,6 +74,77 @@ function Description({
         </div>
       </div>
     </motion.div>
+  );
+}
+
+function Statement({
+  title,
+  article,
+  icon,
+  clarification,
+  statement,
+}: StatementProps) {
+  const [isVisible, setIsVisible] = useState<boolean>(false);
+  const containerRef = useRef<HTMLDivElement | null>(null);
+  const windowWidth = useWindowWidth();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const element = containerRef.current;
+      if (!element) return;
+
+      const top = element.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
+
+      const shouldBeVisible = top < windowHeight * 0.75;
+
+      setIsVisible(shouldBeVisible);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const initialX = isVisible ? 0 : "-25vw";
+
+  return (
+    <>
+      {windowWidth > 850 ? (
+        <motion.div
+          className="statement"
+          initial={{ x: initialX }}
+          animate={{ x: isVisible ? 0 : "-25vw" }}
+          transition={{ type: "spring", stiffness: 100, damping: 15 }}
+          ref={containerRef}
+        >
+          <div className="inner-padding">
+            <div className="icon">{icon}</div>
+            <p className="clarification">{clarification}</p>
+            <h3
+              className="title"
+              dangerouslySetInnerHTML={{
+                __html: italicText(statement),
+              }}
+            />
+          </div>
+        </motion.div>
+      ) : (
+        <div className="statement">
+          <div className="inner-padding">
+            <div className="icon">{icon}</div>
+            <p className="clarification">{clarification}</p>
+            <h3
+              className="title"
+              dangerouslySetInnerHTML={{
+                __html: italicText(statement),
+              }}
+            />
+          </div>
+        </div>
+      )}
+    </>
   );
 }
 

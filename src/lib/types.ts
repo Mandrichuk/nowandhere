@@ -88,4 +88,31 @@ export type DescriptionProps = {
   article: string;
   clarification: string;
   statement: string;
+  key: string;
+};
+
+export type StatementProps = {
+  icon: React.ReactNode;
+  title: string;
+  article: string;
+  clarification: string;
+  statement: string;
+  key: string;
+};
+
+type LastProjectContent = {
+  name: string;
+  title: string;
+  number: string;
+  logo: React.ReactNode;
+  description: string;
+  launch: string;
+  redirectImg: React.ReactNode;
+}
+
+export type LastProjectProps = {
+  en: LastProjectContent;
+  ru: LastProjectContent;
+  sk?: LastProjectContent;
+  de?: LastProjectContent;
 };

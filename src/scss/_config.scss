@@ -1,6 +1,6 @@
 $wrapper-width: 100%;
 $section-margin: 5px;
-$max-width: 1440px;
+$max-width: 1200px;
 $transition: all 0.3s ease-in-out;
 $fast-transition: all 0.15s ease-in-out;
 $animation-time:  5s;
@@ -34,10 +34,10 @@ $font-weights: (
   bold: 700
 );
 $font-sizes: (
-  h1: clamp(70px, 2.5vw, 130px),
+  h1: clamp(60px, 2.5vw, 130px),
   h2: clamp(50px, 2.5vw, 100px),
   h3: clamp(40px, 2.5vw, 70px),
-  h4: clamp(30px, 2.5vw, 60px),
+  h4: clamp(30px, 1.5vw, 60px),
   p: clamp(14px, 1.5vw, 14px),
   introductionIcon: clamp(12px, 1.5vw, 20px),
   serviceIcon: clamp(37px, 1.5vw, 55px),

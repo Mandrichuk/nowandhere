@@ -3,9 +3,16 @@ import {
   type IntroductionProps,
   type WhatWeDoProps,
   type OurServicesProps,
+  type LastProjectProps,
 } from "../lib/types";
 
-export const images = {
+import LastProject from "../assets/LastProject.png";
+
+export const PNGs = {
+  LastProject,
+};
+
+export const SVGs = {
   circle: (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -252,26 +259,26 @@ export const IntroductionText: IntroductionProps = {
       title: "See our services",
       runningText: "We are specialized in Website creation",
       bgImages: {
-        triangleImg: images.triangle,
-        squareImg: images.square,
-        circleImg: images.circle,
+        triangleImg: SVGs.triangle,
+        squareImg: SVGs.square,
+        circleImg: SVGs.circle,
       },
-      icon: images.ourservices,
+      icon: SVGs.ourservices,
     },
     ourLastProject: {
       title: "Last project",
       runningText: "View our showcases",
-      icon: images.work,
+      icon: SVGs.work,
     },
     aboutUs: {
       title: "About us",
       runningText: "Learn more about us",
-      icon: images.aboutus,
+      icon: SVGs.aboutus,
     },
     contactUs: {
       title: "Contact us",
       runningText: "Let’s to talk business. Get in touch with us",
-      icon: images.contactus,
+      icon: SVGs.contactus,
     },
   },
   ru: {
@@ -280,26 +287,26 @@ export const IntroductionText: IntroductionProps = {
       title: "Смотрите наши услуги",
       runningText: "Мы специализируемся в создании сайтов",
       bgImages: {
-        triangleImg: images.triangle,
-        squareImg: images.square,
-        circleImg: images.circle,
+        triangleImg: SVGs.triangle,
+        squareImg: SVGs.square,
+        circleImg: SVGs.circle,
       },
-      icon: images.ourservices,
+      icon: SVGs.ourservices,
     },
     ourLastProject: {
       title: "Последний проект",
       runningText: "Посмотрите наши работы",
-      icon: images.work,
+      icon: SVGs.work,
     },
     aboutUs: {
       title: "О нас",
       runningText: "Узнайте больше о нас",
-      icon: images.aboutus,
+      icon: SVGs.aboutus,
     },
     contactUs: {
       title: "Связаться с нами",
       runningText: "Свяжитесь с нами. Напишите нам",
-      icon: images.contactus,
+      icon: SVGs.contactus,
     },
   },
 };
@@ -311,7 +318,7 @@ export const WhatWeDoText: WhatWeDoProps = {
       "We provide clients with stunning - Crafty- solutions, developed with -skill- & -passion-",
     circle: {
       text: "services • services •",
-      icon: images.arrowDown,
+      icon: SVGs.arrowDown,
     },
   },
   ru: {
@@ -320,7 +327,7 @@ export const WhatWeDoText: WhatWeDoProps = {
       "Мы предоставляем клиентам стильные, - Креативные- сайты, разработанные с -умением- и -энтузиазмом-",
     circle: {
       text: "услуги • услуги •",
-      icon: images.arrowDown,
+      icon: SVGs.arrowDown,
     },
   },
 };
@@ -332,7 +339,7 @@ export const OurServicesText: OurServicesProps = {
         title: "Website Development",
         article:
           "We are focused on developing, from start to finish. Also you can provide us the existing design and we will create a website based on it. ",
-        icon: images.ourservices,
+        icon: SVGs.ourservices,
         clarification: "We are experts in",
         statement: "-website development-",
       },
@@ -340,7 +347,7 @@ export const OurServicesText: OurServicesProps = {
         title: "Website Development",
         article:
           "We are focused on developing, from start to finish. Also you can provide us the existing design and we will create a website based on it. ",
-        icon: images.ourservices,
+        icon: SVGs.ourservices,
         clarification: "We are experts in",
         statement: "website development",
       },
@@ -348,7 +355,7 @@ export const OurServicesText: OurServicesProps = {
         title: "Website Development",
         article:
           "We are focused on developing, from start to finish. Also you can provide us the existing design and we will create a website based on it. ",
-        icon: images.ourservices,
+        icon: SVGs.ourservices,
         clarification: "We are experts in",
         statement: "website development",
       },
@@ -356,7 +363,7 @@ export const OurServicesText: OurServicesProps = {
         title: "Website Development",
         article:
           "We are focused on developing, from start to finish. Also you can provide us the existing design and we will create a website based on it. ",
-        icon: images.ourservices,
+        icon: SVGs.ourservices,
         clarification: "We are experts in",
         statement: "website development",
       },
@@ -366,32 +373,57 @@ export const OurServicesText: OurServicesProps = {
     services: [
       {
         title: "Разработка сайтов",
-        article: "Мы ценим свою работу. Мы создаем сайты, которые выгодно демонстрируются.",
-        icon: images.ourservices,
+        article:
+          "Мы ценим свою работу. Мы создаем сайты, которые выгодно демонстрируются.",
+        icon: SVGs.ourservices,
         clarification: "Мы опытны в",
         statement: "разработке сайтов",
       },
       {
         title: "Разработка сайтов",
-        article: "Мы ценим свою работу. Мы создаем сайты, которые выгодно демонстрируются.",
-        icon: images.ourservices,
+        article:
+          "Мы ценим свою работу. Мы создаем сайты, которые выгодно демонстрируются.",
+        icon: SVGs.ourservices,
         clarification: "Мы опытны в",
         statement: "разработке сайтов",
       },
       {
         title: "Разработка сайтов",
-        article: "Мы ценим свою работу. Мы создаем сайты, которые выгодно демонстрируются.",
-        icon: images.ourservices,
+        article:
+          "Мы ценим свою работу. Мы создаем сайты, которые выгодно демонстрируются.",
+        icon: SVGs.ourservices,
         clarification: "Мы опытны в",
         statement: "разработке сайтов",
       },
       {
         title: "Разработка сайтов",
-        article: "Мы ценим свою работу. Мы создаем сайты, которые выгодно демонстрируются.",
-        icon: images.ourservices,
+        article:
+          "Мы ценим свою работу. Мы создаем сайты, которые выгодно демонстрируются.",
+        icon: SVGs.ourservices,
         clarification: "Мы опытны в",
         statement: "разработке сайтов",
       },
-    ]
+    ],
+  },
+};
+
+export const LastProjectText: LastProjectProps = {
+  en: {
+    number: "01.",
+    launch: "Launch project",
+    logo: PNGs.LastProject,
+    title: "Our last project",
+    name: "Autoblock",
+    description: "anti-theft system",
+    redirectImg: SVGs.arrowDown,
+  },
+  ru: {
+    number: "01.",
+    launch: "Запустить проект",
+    logo: PNGs.LastProject,
+    title: "Наш последний проект",
+    name: "Autoblock",
+    description: "противоугонная система",
+    redirectImg: SVGs.arrowDown,
   },
 };

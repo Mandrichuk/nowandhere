@@ -1,40 +1,47 @@
 .WhatWeDo {
   width: 100%;
-  @include Flex(column, start, start);
-  margin: $section-margin;
-  background-color: color(custom-dark-gray);
-  color: color(custom-purple);
+  .coverContainer {
+    @include Flex(column, start, start);
+    margin: $section-margin;
+    background-color: color(custom-dark-gray);
+    color: color(custom-purple);
+    border-radius: borderRadius(mobile);
+    transition: $transition;
 
-  .name {
-    font-size: fontSize(small);
-    font-weight: fontWeight(regular);
-    letter-spacing: 0.05em;
-  }
-
-  .title {
-    margin: 30px 0;
-    max-width: 60%;
-    font-size: fontSize(h2);
-    font-weight: fontWeight(regular);
-    letter-spacing: 0.05em;
-  }
-
-  .circle {
-
-    width: 100%;
-    @include Flex(row, center, end);
-
-    .text {
-      font-size: fontSize(regular);
-      font-weight: fontWeight(thin);
+    .name {
+      font-size: fontSize(small);
+      font-weight: fontWeight(regular);
+      letter-spacing: 0.05em;
     }
 
-    .icon {
-      width: iconSizes(mobile);
+    .title {
+      margin: 30px 0;
+      max-width: 60%;
+      font-size: fontSize(h2);
+      font-weight: fontWeight(regular);
+      letter-spacing: 0.05em;
+    }
 
-      svg {
-        fill: color(custom-purple);
+    .circle {
+      width: 100%;
+      @include Flex(row, center, end);
+
+      .text {
+        font-size: fontSize(regular);
+        font-weight: fontWeight(thin);
       }
+
+      .icon {
+        width: iconSizes(mobile);
+
+        svg {
+          fill: color(custom-purple);
+        }
+      }
+    }
+
+    &:hover {
+      transform: scale(0.99);
     }
   }
 }

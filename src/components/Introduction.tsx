@@ -1,6 +1,6 @@
 import React from "react";
 
-import { images } from "../constants/Index";
+import { SVGs } from "../constants/Index";
 
 import { IntroductionProps } from "../lib/interfaces";
 

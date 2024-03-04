@@ -1,0 +1,73 @@
+.LastProject {
+  cursor: pointer;
+  width: 100%;
+  .coverContainer {
+    transition: $transition;
+    @include Flex(column, center, center);
+    margin: $section-margin;
+    background-color: color(custom-white);
+    border-radius: borderRadius(mobile);
+    color: color(custom-dark-gray);
+
+    .project {
+      @include Flex(column, start, center);
+      height: 100%;
+      .number {
+        font-size: fontSize(p);
+        font-weight: fontWeight(bold);
+      }
+
+      .projectDetails {
+        margin: 3rem 0 3rem 0;
+        height: 100%;
+        width: 100%;
+        @include Flex(column, center, center);
+
+        .text {
+          @include Flex(column, center, center);
+          margin-bottom: 50px;
+
+          .title {
+            font-weight: fontWeight(semibold);
+            font-size: fontSize(h4);
+            margin-bottom: 20px;
+          }
+
+          .name {
+            font-weight: fontWeight(bold);
+            font-size: fontSize(h1);
+            color: color(custom-red);
+          }
+
+          .description {
+            font-weight: fontWeight(bold);
+            font-size: calc(fontSize(p) + 3px);
+            color: color(custom-red);
+            position: absolute;
+            margin: 130px 0 0 160px;
+          }
+        }
+
+        .logo {
+          width: 250px;
+
+          img {
+            width: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+
+      .launch {
+        font-size: fontSize(p);
+        font-weight: fontWeight(bold);
+      }
+    }
+
+    &:hover {
+      transform: scale(0.99);
+    }
+  }
+}
+
+

@@ -12,16 +12,18 @@ function WhatWeDo({ lang }: WhatWeDoProps) {
 
   return (
     <section id="WhatWeDo" className="WhatWeDo container">
-      <div className="inner-padding">
-        <p className="name">{toUpperCase(WhatWeDoText.name)}</p>
-        <p
-          className="title"
-          dangerouslySetInnerHTML={{ __html: italicText(WhatWeDoText.title) }}
-        />
+      <div className="coverContainer">
+        <div className="inner-padding">
+          <p className="name">{toUpperCase(WhatWeDoText.name)}</p>
+          <p
+            className="title"
+            dangerouslySetInnerHTML={{ __html: italicText(WhatWeDoText.title) }}
+          />
 
-        <div className="circle">
-          <p className="text">{WhatWeDoText.circle.text}</p>
-          <div className="icon">{WhatWeDoText.circle.icon}</div>
+          <div className="circle">
+            <p className="text">{WhatWeDoText.circle.text}</p>
+            <div className="icon">{WhatWeDoText.circle.icon}</div>
+          </div>
         </div>
       </div>
     </section>
