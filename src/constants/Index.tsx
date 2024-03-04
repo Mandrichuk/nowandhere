@@ -1,4 +1,9 @@
-import { type LogoProps, type IntroductionProps, type WhatWeDoProps } from "../lib/types";
+import {
+  type LogoProps,
+  type IntroductionProps,
+  type WhatWeDoProps,
+  type OurServicesProps,
+} from "../lib/types";
 
 export const images = {
   circle: (
@@ -316,6 +321,77 @@ export const WhatWeDoText: WhatWeDoProps = {
     circle: {
       text: "услуги • услуги •",
       icon: images.arrowDown,
-    }
+    },
+  },
+};
+
+export const OurServicesText: OurServicesProps = {
+  en: {
+    services: [
+      {
+        title: "Website Development",
+        article:
+          "We are focused on developing, from start to finish. Also you can provide us the existing design and we will create a website based on it. ",
+        icon: images.ourservices,
+        clarification: "We are experts in",
+        statement: "-website development-",
+      },
+      {
+        title: "Website Development",
+        article:
+          "We are focused on developing, from start to finish. Also you can provide us the existing design and we will create a website based on it. ",
+        icon: images.ourservices,
+        clarification: "We are experts in",
+        statement: "website development",
+      },
+      {
+        title: "Website Development",
+        article:
+          "We are focused on developing, from start to finish. Also you can provide us the existing design and we will create a website based on it. ",
+        icon: images.ourservices,
+        clarification: "We are experts in",
+        statement: "website development",
+      },
+      {
+        title: "Website Development",
+        article:
+          "We are focused on developing, from start to finish. Also you can provide us the existing design and we will create a website based on it. ",
+        icon: images.ourservices,
+        clarification: "We are experts in",
+        statement: "website development",
+      },
+    ],
+  },
+  ru: {
+    services: [
+      {
+        title: "Разработка сайтов",
+        article: "Мы ценим свою работу. Мы создаем сайты, которые выгодно демонстрируются.",
+        icon: images.ourservices,
+        clarification: "Мы опытны в",
+        statement: "разработке сайтов",
+      },
+      {
+        title: "Разработка сайтов",
+        article: "Мы ценим свою работу. Мы создаем сайты, которые выгодно демонстрируются.",
+        icon: images.ourservices,
+        clarification: "Мы опытны в",
+        statement: "разработке сайтов",
+      },
+      {
+        title: "Разработка сайтов",
+        article: "Мы ценим свою работу. Мы создаем сайты, которые выгодно демонстрируются.",
+        icon: images.ourservices,
+        clarification: "Мы опытны в",
+        statement: "разработке сайтов",
+      },
+      {
+        title: "Разработка сайтов",
+        article: "Мы ценим свою работу. Мы создаем сайты, которые выгодно демонстрируются.",
+        icon: images.ourservices,
+        clarification: "Мы опытны в",
+        statement: "разработке сайтов",
+      },
+    ]
   },
 };

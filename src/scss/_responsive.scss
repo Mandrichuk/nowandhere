@@ -415,5 +415,108 @@
         }
       }
     }
+
+    .Services {
+      margin: $section-margin;
+      @include Flex(column, center, space-between);
+
+      .wrapper {
+        width: 100%;
+        margin: $section-margin 0;
+        @include Flex(row, center, space-between);
+        aspect-ratio: 1 / 0.25;
+
+        .description {
+          height: 100%;
+
+          color: color(custom-purple);
+          border-radius: borderRadius(mobile);
+          background-color: color(custom-dark-gray);
+          flex: 1;
+
+          .inner-padding {
+            @include Flex(row, center, center);
+            .icon {
+              display: block;
+              min-width: iconSizes(screen);
+              margin-right: 20px;
+              // flex: 1
+
+              svg {
+                fill: color(custom-purple);
+              }
+            }
+
+            .text {
+              .title {
+                font-weight: fontWeight(regular);
+                font-size: calc(fontSize(p) + 3px);
+                margin-bottom: 25px;
+              }
+
+              .article {
+                font-size: fontSize(regular);
+                line-height: 1.5;
+              }
+            }
+          }
+        }
+
+        .statement {
+          @include Flex(column, center, center);
+          height: 100%;
+          background-color: color(custom-purple);
+          color: color(custom-dark-gray);
+          border-radius: borderRadius(mobile);
+          flex: 1;
+
+          .inner-padding {
+            @include Flex(column, center, center);
+            .icon {
+              width: iconSizes(mobile);
+              display: none;
+
+              svg {
+                fill: color(custom-dark-gray);
+              }
+            }
+
+            .clarification,
+            .title {
+              display: block;
+            }
+            .clarification {
+              font-weight: fontWeight(semibold);
+              font-size: calc(fontSize(p) + 3px);
+              margin-bottom: 20px;
+            }
+            .title {
+              font-weight: fontWeight(bold);
+              font-size: fontSize(h4);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  #root {
+    .Services {
+      .wrapper {
+        aspect-ratio: 1 / 0.25;
+      }
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  #root {
+    .Services {
+      .wrapper {
+        aspect-ratio: 1 / 0.2;
+      }
+    }
   }
 }

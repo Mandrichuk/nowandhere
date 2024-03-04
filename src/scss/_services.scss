@@ -1,0 +1,65 @@
+.Services {
+  margin: $section-margin;
+  @include Flex(column, center, space-between);
+
+  .wrapper {
+    width: 100%;
+    margin: $section-margin 0;
+    @include Flex(row, center, space-between);
+    aspect-ratio: 1 / 0.55;
+
+    .description {
+      height: 100%;
+
+      color: color(custom-purple);
+      border-radius: borderRadius(mobile);
+      background-color: color(custom-dark-gray);
+      flex: 1.6;
+
+      .inner-padding {
+        .icon {
+          display: none;
+        }
+
+        .text {
+          .title {
+            font-weight: fontWeight(regular);
+            font-size: calc(fontSize(services) + 3px);
+            margin-bottom: 25px;
+          }
+
+          .article {
+            font-size: fontSize(services);
+            line-height: 1.3;
+          }
+        }
+      }
+    }
+
+    .statement {
+      @include Flex(column, center, center);
+      height: 100%;
+      background-color: color(custom-purple);
+      color: color(custom-dark-gray);
+      border-radius: borderRadius(mobile);
+      flex: 0.4;
+
+      .inner-padding {
+        @include Flex(column, center, center);
+        .icon {
+          width: iconSizes(mobile);
+
+          svg {
+            fill: color(custom-dark-gray);
+          }
+        }
+
+        .clarification,
+        .title {
+          display: none;
+        }
+      }
+    }
+  }
+}
+

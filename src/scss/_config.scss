@@ -37,10 +37,12 @@ $font-sizes: (
   h1: clamp(70px, 2.5vw, 130px),
   h2: clamp(50px, 2.5vw, 100px),
   h3: clamp(40px, 2.5vw, 70px),
+  h4: clamp(30px, 2.5vw, 60px),
   p: clamp(14px, 1.5vw, 14px),
   introductionIcon: clamp(12px, 1.5vw, 20px),
   serviceIcon: clamp(37px, 1.5vw, 55px),
-  small: clamp(10px, 1.5vw, 12px)
+  small: clamp(10px, 1.5vw, 12px),
+  services: clamp(14px, 1.5vw, 16px)
 );
 $icon-sizes: (
   mobile: 30px,

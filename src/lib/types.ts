@@ -48,17 +48,44 @@ export type IntroductionProps = {
 type Circle = {
   icon: React.ReactNode;
   text: string;
-}
+};
 
 type WhatWeDoContent = {
   name: string;
   title: string;
   circle: Circle;
-}
+};
 
 export type WhatWeDoProps = {
   en: WhatWeDoContent;
   ru: WhatWeDoContent;
   sk?: WhatWeDoContent;
   de?: WhatWeDoContent;
+};
+
+type Service = {
+  title: string;
+  article: string;
+  icon: React.ReactNode;
+  clarification: string;
+  statement: string;
+};
+
+type OurServicesContent = {
+  services: Service[];
+};
+
+export type OurServicesProps = {
+  en: OurServicesContent;
+  ru: OurServicesContent;
+  sk?: OurServicesContent;
+  de?: OurServicesContent;
+};
+
+export type DescriptionProps = {
+  icon: React.ReactNode;
+  title: string;
+  article: string;
+  clarification: string;
+  statement: string;
 };

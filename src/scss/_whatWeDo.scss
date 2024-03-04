@@ -1,7 +1,7 @@
 .WhatWeDo {
   width: 100%;
   @include Flex(column, start, start);
-  padding: $section-margin;
+  margin: $section-margin;
   background-color: color(custom-dark-gray);
   color: color(custom-purple);
 
