@@ -1,10 +1,15 @@
 export interface InputProps extends Language {
-  error: boolean;
   type: string;
   placeholder: string;
   field: string;
-  devastation: boolean;
   getValue: (field: string, text: string) => void;
+  error: boolean;
+  devastation: boolean;
+}
+
+export interface ContactLinkProps {
+  children: string | React.ReactNode;
+  link: string;
 }
 
 export interface Language {

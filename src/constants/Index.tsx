@@ -4,6 +4,8 @@ import {
   type WhatWeDoProps,
   type OurServicesProps,
   type LastProjectProps,
+  type InputAlert,
+  type GetInTouchProps,
 } from "../lib/types";
 
 import LastProject from "../assets/LastProject.png";
@@ -242,6 +244,15 @@ export const SVGs = {
   ),
 };
 
+export const InputAlertText: InputAlert = {
+  ru: {
+    alert: "*Заполните поле",
+  },
+  en: {
+    alert: "*Fill the field",
+  },
+};
+
 export const LogoText: LogoProps = {
   article: "the",
   name: "Now&Here",
@@ -429,18 +440,81 @@ export const WhoWeAreText = {
     title: 'Who are the <span style="font-weight: 500;">Now&Here?</span>',
     article:
       "We are a website agency with vivid and creative solutions. We would love to work with clients from all around the world!",
-    keywords: [
-     "cool",
-     "great"
-    ],
+    keywords: ["cool", "great"],
   },
   ru: {
     title: 'Кто такие <span style="font-weight: 500;">Now&Here?</span>',
     article:
       "Мы агентство с визуальными и красивыми решениями. Мы будем рады работать с клиентами из мира!",
-    keywords: [
-      "круто",
-      "красиво"
+    keywords: ["круто", "красиво"],
+  },
+};
+
+export const GetInTouchText: GetInTouchProps = {
+  en: {
+    name: "get in touch!",
+    title: "Do you have a question, an idea or a project you need help with? ",
+    label: "Contact us!",
+    contacts: [
+      {
+        children: "nowandhere@agency.com",
+        link: "/gmail@gmail.com",
+      },
+      {
+        children: "+380 000 00 00 00",
+        link: "/instagram@nowandhere",
+      },
     ],
+    socials: [
+      {
+        children: SVGs.linkedin,
+        link: "/instagram@nowandhere",
+      },
+      {
+        children: SVGs.facebook,
+        link: "/instagram@nowandhere",
+      },
+      {
+        children: SVGs.telegram,
+        link: "/instagram@nowandhere",
+      },
+    ],
+    circle: {
+      text: "contact • contact •",
+      icon: SVGs.arrowDown,
+    },
+  },
+  ru: {
+    name: "Свяжитесь с нами!",
+    title: "Есть вопрос, идея или проект, который вам нужна помощь?",
+    label: "Свяжитесь с нами!",
+    contacts: [
+      {
+        children: "gmail@gmail.com",
+        link: "/gmail@gmail.com",
+      },
+      {
+        children: "+380 000 00 00 00",
+        link: "/instagram@nowandhere",
+      },
+    ],
+    socials: [
+      {
+        children: SVGs.linkedin,
+        link: "/instagram@nowandhere",
+      },
+      {
+        children: SVGs.facebook,
+        link: "/instagram@nowandhere",
+      },
+      {
+        children: SVGs.telegram,
+        link: "/instagram@nowandhere",
+      },
+    ],
+    circle: {
+      text: "контакты • контакты •",
+      icon: SVGs.arrowDown,
+    },
   },
 };

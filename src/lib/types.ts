@@ -1,3 +1,14 @@
+export type InputAlertContent = {
+  alert: string;
+};
+
+export type InputAlert = {
+  en: InputAlertContent;
+  ru: InputAlertContent;
+  sk?: InputAlertContent;
+  de?: InputAlertContent;
+};
+
 export type ColorizeSubstringProps = {
   text: string;
   color: string;
@@ -126,4 +137,29 @@ type LanguageData = {
 export type WhoWeAreText = {
   en: LanguageData;
   ru: LanguageData;
+};
+
+
+type Contact = {
+  children: string;
+  link: string;
+};
+
+type Social = {
+  children: React.ReactNode;
+  link: string;
+};
+
+type GetInTouchContent = {
+  name: string;
+  title: string;
+  label: string;
+  contacts: Contact[];
+  socials: Social[];
+  circle: Circle;
+};
+
+export type GetInTouchProps = {
+  en: GetInTouchContent;
+  ru: GetInTouchContent;
 };

@@ -1,0 +1,32 @@
+.ContactLink {
+  cursor: pointer;
+  width: 100%;
+  transition: $transition;
+  .cover {
+    margin: $section-margin;
+    border: 1.5px solid color(custom-yellow);
+    border-radius: borderRadius(mobile);
+    background-color: color(custom-yellow-gray);
+    height: 55px;
+    @include Flex(row, center, center);
+
+    .text {
+      font-size: fontSize(p);
+      color: color(custom-yellow);
+
+    }
+
+    .icon {
+      width: 25px;
+
+      svg {
+        height: 100%;
+        fill: color(custom-yellow);
+      }
+    }
+  }
+
+  &:hover {
+    transform: scale(0.99);
+  }
+}

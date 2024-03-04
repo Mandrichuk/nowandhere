@@ -2,7 +2,6 @@
   width: 100%;
   .coverContainer {
     transition: $transition;
-    aspect-ratio: 1 / 1.5;
     @include Flex(column, start, start);
     margin: $section-margin;
     background-color: color(custom-pink-gray);

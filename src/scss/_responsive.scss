@@ -572,6 +572,85 @@
         }
       }
     }
+
+    .GetInTouch {
+      width: 100%;
+      .coverContainer {
+        @include Flex(column, start, center);
+        margin: $section-margin;
+        background-color: color(custom-yellow-gray);
+        border-radius: borderRadius(mobile);
+        color: color(custom-yellow);
+
+        .inner-padding {
+          .name {
+            font-size: fontSize(small);
+            font-weight: fontWeight(regular);
+            letter-spacing: 0.05em;
+          }
+
+          .textContainer {
+            margin: 30px 0;
+            max-width: 50%;
+            font-weight: fontWeight(regular);
+            font-size: fontSize(h1);
+
+            .title {
+              margin-bottom: 20px;
+            }
+          }
+
+          .details {
+            @include Flex(column, end, center);
+            width: 100%;
+            flex: 1;
+            .links {
+              width: 100%;
+              margin-bottom: 20px;
+
+              .contacts {
+                width: 100%;
+                @include Flex(row, center, center);
+
+                .contact {
+                  width: 100%;
+                  flex: 1;
+                }
+              }
+            }
+          }
+
+          .socials {
+            width: 100%;
+            @include Flex(row, center, center);
+
+            .social {
+              flex: 1;
+            }
+          }
+
+          .circle {
+            width: 100%;
+            @include Flex(row, center, end);
+
+            .text {
+              font-size: fontSize(regular);
+              font-weight: fontWeight(thin);
+            }
+
+            .icon {
+              margin-right: 10px;
+              height: iconSizes(mobile);
+
+              svg {
+                height: 100%;
+                fill: color(custom-yellow);
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
 
