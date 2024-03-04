@@ -108,11 +108,22 @@ type LastProjectContent = {
   description: string;
   launch: string;
   redirectImg: React.ReactNode;
-}
+};
 
 export type LastProjectProps = {
   en: LastProjectContent;
   ru: LastProjectContent;
   sk?: LastProjectContent;
   de?: LastProjectContent;
+};
+
+type LanguageData = {
+  title: string;
+  article: string;
+  images: string[];
+};
+
+export type WhoWeAreText = {
+  en: LanguageData;
+  ru: LanguageData;
 };

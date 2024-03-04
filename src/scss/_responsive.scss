@@ -446,7 +446,6 @@
                 display: block;
                 min-width: iconSizes(screen);
                 margin-right: 20px;
-                // flex: 1
 
                 svg {
                   fill: color(custom-purple);
@@ -509,7 +508,6 @@
     .LastProject {
       width: 100%;
       .coverContainer {
-        // aspect-ratio: 1 / 0.7;
         @include Flex(column, center, center);
         margin: $section-margin;
         background-color: color(custom-white);
@@ -552,7 +550,7 @@
                 font-size: calc(fontSize(p) + 3px);
                 color: color(custom-red);
                 position: absolute;
-                margin: 140px 0 0 210px;
+                margin: 140px 0 0 160px;
               }
             }
 

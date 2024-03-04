@@ -1,0 +1,35 @@
+.WhoWeAre {
+  width: 100%;
+  .coverContainer {
+    transition: $transition;
+    aspect-ratio: 1 / 1.5;
+    @include Flex(column, start, start);
+    margin: $section-margin;
+    background-color: color(custom-pink-gray);
+    color: color(custom-pink);
+    border-radius: borderRadius(mobile);
+
+    .inner-padding {
+      position: relative;
+      .wrapper {
+        .title {
+          text-align: center;
+          width: 100%;
+          font-size: fontSize(h2);
+          font-weight: fontWeight(regular);
+        }
+
+        .article {
+          font-size: fontSize(p);
+          font-weight: fontWeight(regular);
+          width: 70%;
+          margin-top: 50px;
+        }
+      }
+    }
+
+    &:hover {
+      transform: scale(0.99);
+    }
+  }
+}
