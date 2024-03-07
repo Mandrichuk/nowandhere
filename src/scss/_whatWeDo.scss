@@ -8,38 +8,44 @@
     border-radius: borderRadius(mobile);
     transition: $transition;
 
-    .name {
-      font-size: fontSize(small);
-      font-weight: fontWeight(regular);
-      letter-spacing: 0.05em;
-    }
-
-    .title {
-      margin: 30px 0;
-      max-width: 60%;
-      font-size: fontSize(h1);
-      font-weight: fontWeight(regular);
-      letter-spacing: 0.05em;
-    }
-
-    .circle {
-      width: 100%;
-      @include Flex(row, center, end);
-
-      .text {
-        font-size: fontSize(regular);
-        font-weight: fontWeight(thin);
+    .inner-padding {
+      .name {
+        font-size: fontSize(small);
+        font-weight: fontWeight(regular);
+        letter-spacing: 0.05em;
       }
 
-      .icon {
-        width: iconSizes(mobile);
+      .mainSection {
+        @include Flex(column, start, start);
+        .title {
+          margin: 30px 0;
+          max-width: 60%;
+          font-size: fontSize(h1);
+          font-weight: fontWeight(regular);
+          letter-spacing: 0.05em;
+        }
 
-        svg {
-          fill: color(custom-purple);
+        .circle {
+          margin-top: 30px;
+          width: 100%;
+          @include Flex(row, center, end);
+            fill: color(custom-purple);
+
+          .text {
+            font-size: fontSize(regular);
+            font-weight: fontWeight(thin);
+          }
+
+          .icon {
+            width: iconSizes(mobile);
+
+            svg {
+              fill: inherit;
+            }
+          }
         }
       }
     }
-
     &:hover {
       transform: scale(0.99);
     }

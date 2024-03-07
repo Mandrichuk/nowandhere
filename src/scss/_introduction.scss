@@ -90,6 +90,7 @@
 
     &:hover {
       .container-introduction {
+        transform: scale(0.99);
         .inner-padding-introduction {
           .running-text {
             opacity: 0.3;
@@ -131,6 +132,7 @@
       padding: 0 $section-margin;
       width: 100%;
       .lastProjectContainer {
+        transition: $transition;
         flex: 1;
         aspect-ratio: 1 / 1;
         border-radius: 999px;
@@ -184,9 +186,14 @@
           font-weight: fontWeight(semibold);
           font-size: fontSize(h2);
         }
+
+        &:hover {
+          transform: scale(0.99);
+        }
       }
 
       .aboutUsContainer {
+        transition: $transition;
         cursor: pointer;
         margin: $section-margin;
         flex: 1;
@@ -243,11 +250,16 @@
           font-weight: fontWeight(semibold);
           font-size: fontSize(h2);
         }
+
+        &:hover {
+          transform: scale(0.99);
+        }
       }
     }
   }
 
   .contactUsContainer {
+    transition: $transition;
     cursor: pointer;
     margin: $section-margin;
     flex: 1;
@@ -303,6 +315,10 @@
       position: absolute;
       font-weight: fontWeight(semibold);
       font-size: fontSize(h2);
+    }
+
+    &:hover {
+      transform: scale(0.99);
     }
   }
 }

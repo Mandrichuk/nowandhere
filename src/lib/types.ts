@@ -163,3 +163,9 @@ export type GetInTouchProps = {
   en: GetInTouchContent;
   ru: GetInTouchContent;
 };
+
+export type CircularTextProps = {
+  children: string;
+  icon: React.ReactNode;
+  color: string;
+}

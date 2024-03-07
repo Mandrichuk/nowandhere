@@ -7,6 +7,8 @@ import { WhatWeDoText as WhatWeDoTextConstant } from "../constants/Index";
 import { toUpperCase } from "../utils/toUpperCase";
 import italicText from "../utils/italicText";
 
+import CircularText from "./CircularText";
+
 function WhatWeDo({ lang }: WhatWeDoProps) {
   const WhatWeDoText = WhatWeDoTextConstant[lang] || WhatWeDoTextConstant["en"];
 
@@ -15,14 +17,19 @@ function WhatWeDo({ lang }: WhatWeDoProps) {
       <div className="coverContainer">
         <div className="inner-padding">
           <p className="name">{toUpperCase(WhatWeDoText.name)}</p>
-          <p
-            className="title"
-            dangerouslySetInnerHTML={{ __html: italicText(WhatWeDoText.title) }}
-          />
+          <div className="mainSection">
+            <p
+              className="title"
+              dangerouslySetInnerHTML={{
+                __html: italicText(WhatWeDoText.title),
+              }}
+            />
 
-          <div className="circle">
-            <p className="text">{WhatWeDoText.circle.text}</p>
-            <div className="icon">{WhatWeDoText.circle.icon}</div>
+            <div className="circle">
+              <CircularText color="#8985E0" icon={WhatWeDoText.circle.icon}>
+                {WhatWeDoText.circle.text}
+              </CircularText>
+            </div>
           </div>
         </div>
       </div>

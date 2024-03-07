@@ -1,10 +1,15 @@
 export interface InputProps extends Language {
-  type: string;
+  type?: string;
   placeholder: string;
   field: string;
   getValue: (field: string, text: string) => void;
   error: boolean;
   devastation: boolean;
+}
+
+export interface ButtonProps extends Language {
+  children: string;
+  icon: React.ReactNode;
 }
 
 export interface ContactLinkProps {
@@ -33,7 +38,6 @@ export interface WhoWeAreProps extends Language {}
 export interface WhatWeDoProps extends Language {}
 
 export interface ServicesProps extends Language {}
-
 
 export interface RoundedTextProps {
   children: string;

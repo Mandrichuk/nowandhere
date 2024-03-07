@@ -255,7 +255,7 @@ export const InputAlertText: InputAlert = {
 
 export const LogoText: LogoProps = {
   article: "the",
-  name: "Now&Here",
+  name: `Now<span style="color: #e295bd;">&</span>Here`,
   label: ".agency",
 };
 
@@ -324,7 +324,7 @@ export const WhatWeDoText: WhatWeDoProps = {
     title:
       "We provide clients with stunning - Crafty- solutions, developed with -skill- & -passion-",
     circle: {
-      text: "services • services •",
+      text: "services • services • services • ",
       icon: SVGs.arrowDown,
     },
   },
@@ -480,7 +480,7 @@ export const GetInTouchText: GetInTouchProps = {
       },
     ],
     circle: {
-      text: "contact • contact •",
+      text: "contact • contact • contact • ",
       icon: SVGs.arrowDown,
     },
   },
@@ -515,6 +515,63 @@ export const GetInTouchText: GetInTouchProps = {
     circle: {
       text: "контакты • контакты •",
       icon: SVGs.arrowDown,
+    },
+  },
+};
+
+export const ContactFormText = {
+  en: {
+    nameInput: {
+      type: "text",
+      placeholder: "Name",
+      field: "nameInput",
+    },
+    emailInput: {
+      type: "email",
+      placeholder: "Email",
+      field: "emailInput",
+    },
+    subjectInput: {
+      type: "text",
+      placeholder: "Subject",
+      field: "subjectInput",
+    },
+    textarea: {
+      type: "text",
+      placeholder: "Subject",
+      field: "messageInput",
+    },
+    button: {
+      type: "submit",
+      text: "Send",
+      icon: SVGs.contactus,
+    },
+  },
+  ru: {
+    nameInput: {
+      type: "text",
+      placeholder: "Имя",
+      field: "nameInput",
+    },
+    emailInput: {
+      type: "email",
+      placeholder: "Email",
+      field: "emailInput",
+    },
+    subjectInput: {
+      type: "text",
+      placeholder: "Тема",
+      field: "subjectInput",
+    },
+    textarea: {
+      type: "text",
+      placeholder: "Тема",
+      field: "messageInput",
+    },
+    button: {
+      type: "submit",
+      text: "Отправить",
+      icon: SVGs.contactus,
     },
   },
 };

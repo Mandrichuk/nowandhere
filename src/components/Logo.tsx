@@ -12,16 +12,24 @@ function Logo({ lang }: LogoProps) {
     text: LogoText.name,
     color: "red",
   };
+  const titleWithStyle = {
+    __html: LogoText.name,
+  };
 
   return (
     <section id="Logo" className="Logo">
-      <div id="logoName" className="name">
-        {LogoText.name}
-      </div>
+      <div
+        id="logoName"
+        className="name"
+        dangerouslySetInnerHTML={titleWithStyle}
+      />
+
       <div data-anchor="logoName" className="article">
         {toUpperCase(LogoText.article)}
       </div>
-      <div data-anchor="logoName" className="label">{LogoText.label}</div>
+      <div data-anchor="logoName" className="label">
+        {LogoText.label}
+      </div>
     </section>
   );
 }

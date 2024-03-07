@@ -1,9 +1,9 @@
 .WhoWeAre {
   width: 100%;
   .coverContainer {
+    margin: $section-margin * 2;
     transition: $transition;
     @include Flex(column, start, start);
-    margin: $section-margin;
     background-color: color(custom-pink-gray);
     color: color(custom-pink);
     border-radius: borderRadius(mobile);

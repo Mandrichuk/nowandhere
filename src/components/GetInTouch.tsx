@@ -8,6 +8,9 @@ import { GetInTouchText as GetInTouchTextConstant } from "../constants/Index";
 
 import { toUpperCase } from "../utils/toUpperCase";
 
+import CircularText from "./CircularText";
+
+
 function GetInTouch({ lang }: GetInTouchProps) {
   const getInTouchText =
     GetInTouchTextConstant[lang as keyof typeof GetInTouchTextConstant] ||
@@ -40,8 +43,8 @@ function GetInTouch({ lang }: GetInTouchProps) {
               </div>
             </div>
             <div className="circle">
-              <div className="text">{getInTouchText.circle.text}</div>
-              <div className="icon">{getInTouchText.circle.icon}</div>
+            <CircularText color="#fef073" icon={getInTouchText.circle.icon}>{getInTouchText.circle.text}</CircularText>
+         
             </div>
           </div>
         </div>

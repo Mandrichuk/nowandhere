@@ -16,12 +16,12 @@ function Services({ lang }: ServicesProps) {
   return (
     <section id="Services" className="Services">
       <div className="coverContainer">
-      {servicesText.services.map((service, index) => (
-        <div className="wrapper" key={`wrapper-${index}`}>
-          <Description {...service} key={`description-${index}`} />
-          <Statement {...service} key={`statement-${index}`} />
-        </div>
-      ))}
+        {servicesText.services.map((service, index) => (
+          <div className="wrapper" key={`wrapper-${index}`}>
+            <Description {...service} key={`description-${index}`} />
+            <Statement {...service} key={`statement-${index}`} />
+          </div>
+        ))}
       </div>
     </section>
   );
@@ -33,8 +33,12 @@ function Description({
   icon,
   clarification,
 }: DescriptionProps) {
+  const windowWidth = useWindowWidth();
   const [isVisible, setIsVisible] = useState<boolean>(false);
   const containerRef = useRef<HTMLDivElement | null>(null);
+  const descrptionVw = {
+    1920: 0,
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -55,13 +59,34 @@ function Description({
     };
   }, []);
 
-  const initialX = isVisible ? 0 : "+25vw";
+  function getVw() {
+    if (windowWidth < 410) {
+      return "+24vw";
+    } else if (windowWidth < 420) {
+      return "+21vw";
+    } else if (windowWidth < 950) {
+      return "+25vw";
+    } else if (windowWidth < 1100) {
+      return "+25vw";
+    } else if (windowWidth < 1400) {
+      return "+23vw";
+    } else if (windowWidth < 1800) {
+      return "+17vw";
+    } else if (windowWidth < 2000) {
+      return "+18.5vw";
+    } else if (windowWidth < 2500) {
+      return "+14.5vw";
+    }
+    return "+25vw";
+  }
+
+  const initialX = isVisible ? 0 : getVw();
 
   return (
     <motion.div
       className="description"
       initial={{ x: initialX }}
-      animate={{ x: isVisible ? 0 : "+25vw" }}
+      animate={{ x: isVisible ? 0 : getVw() }}
       transition={{ type: "spring", stiffness: 100, damping: 15 }}
       ref={containerRef}
     >
@@ -107,7 +132,29 @@ function Statement({
     };
   }, []);
 
-  const initialX = isVisible ? 0 : "-25vw";
+  function getVw() {
+    if (windowWidth < 410) {
+      return "-24vw";
+    } else if (windowWidth < 420) {
+      return "-21vw";
+    } else if (windowWidth < 950) {
+      return "-25vw";
+    } else if (windowWidth < 1100) {
+      return "-25vw";
+    } else if (windowWidth < 1400) {
+      return "-23.5vw";
+    } 
+    else if (windowWidth < 1800) {
+      return "-18.5vw";
+    } else if (windowWidth < 2000) {
+      return "-15vw";
+    } else if (windowWidth < 2500) {
+      return "-14.5vw";
+    }
+    return "-25vw";
+  }
+
+  const initialX = isVisible ? 0 : getVw();
 
   return (
     <>
@@ -115,7 +162,7 @@ function Statement({
         <motion.div
           className="statement"
           initial={{ x: initialX }}
-          animate={{ x: isVisible ? 0 : "-25vw" }}
+          animate={{ x: isVisible ? 0 : getVw() }}
           transition={{ type: "spring", stiffness: 100, damping: 15 }}
           ref={containerRef}
         >

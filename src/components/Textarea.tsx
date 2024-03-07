@@ -1,13 +1,10 @@
 import React, { useState, useEffect } from "react";
-
 import { InputProps } from "../lib/interfaces";
-
 import { InputAlertText } from "../constants/Index";
 
-function Input({
+function Textarea({
   lang,
   error,
-  type,
   placeholder,
   field,
   devastation,
@@ -16,7 +13,7 @@ function Input({
   const inputAlertTextData = InputAlertText[lang] || InputAlertText["en"];
   const [text, setText] = useState("");
 
-  function changeText(e: React.ChangeEvent<HTMLInputElement>) {
+  function changeText(e: React.ChangeEvent<HTMLTextAreaElement>) {
     setText(e.target.value);
   }
 
@@ -31,12 +28,11 @@ function Input({
   }, [devastation]);
 
   return (
-    <div id={`input-${field}`} className="InputContainer">
+    <div id={`input-${field}`} className="TextareaContainer">
       <div className="cover">
-        <input
-          type={type}
+        <textarea
           placeholder={`${placeholder}...`}
-          onChange={(e) => getValue(field, e.target.value)}
+          onChange={changeText}
         />
         {error && <label>{inputAlertTextData.alert}</label>}
       </div>
@@ -44,4 +40,4 @@ function Input({
   );
 }
 
-export default Input;
+export default Textarea;

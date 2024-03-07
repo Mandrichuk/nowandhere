@@ -1,0 +1,31 @@
+.CiricularTextContainer {
+  @include Flex(row, center, center);
+  display: block;
+
+  .circular-text {
+    @include Flex(row, center, center);
+    width: 100px;
+    height: 100px;
+
+    .text {
+      font-weight: fontWeight(thin);
+      font-size: fontSize(p);
+      text-transform: uppercase;
+      transform-origin: center;
+    }
+
+    .arrow {
+      display: block;
+      width: iconSizes(mobile);
+      height: iconSizes(mobile);
+      position: absolute;
+      fill: color(custom-red);
+      svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+        fill: inherit;
+      }
+    }
+  }
+}
