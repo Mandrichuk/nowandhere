@@ -6,6 +6,8 @@ import {
   type LastProjectProps,
   type InputAlert,
   type GetInTouchProps,
+  type WhoWeAreProps,
+  type ContactFormProps,
 } from "../lib/types";
 
 import LastProject from "../assets/LastProject.png";
@@ -15,6 +17,81 @@ export const PNGs = {
 };
 
 export const SVGs = {
+  react: (
+    <svg
+      version="1.1"
+      id="Layer_1"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlnsXlink="http://www.w3.org/1999/xlink"
+      x="0px"
+      y="0px"
+      viewBox="0 0 511.893 511.893"
+      xmlSpace="preserve"
+    >
+      <g>
+        <g>
+          <g>
+            <path
+              d="M458.599,261.333c32.107-47.253,41.707-94.293,21.44-129.387c-19.947-34.453-64.213-49.6-119.787-46.187
+      C335.079,32.853,297.959,0,255.932,0s-79.147,32.96-104.427,85.867c-0.747,0-1.6-0.213-2.347-0.213
+      C92.412,82.56,50.812,99.093,31.826,131.84c-20.267,35.2-10.667,82.133,21.44,129.387
+      c-32.107,47.253-41.707,94.293-21.44,129.387c18.133,31.36,56.213,46.827,104.747,46.827c6.613,0,13.44-0.32,20.373-0.853
+      c24.96,46.72,59.84,75.307,99.093,75.307s74.133-28.587,99.093-75.307c6.933,0.533,13.76,0.853,20.267,0.853
+      c48.427,0,86.613-15.467,104.747-46.827C500.306,355.627,490.706,308.587,458.599,261.333z M461.586,142.613
+      c14.933,25.813,7.147,62.08-16.96,99.947c-16.32-20.053-34.773-38.293-54.827-54.613c-3.84-27.627-10.667-54.613-20.373-80.747
+      C412.839,105.813,446.972,117.333,461.586,142.613z M393.212,219.733c13.867,12.8,26.667,26.667,38.293,41.6
+      c-11.84,15.253-25.067,29.44-39.36,42.453c1.493-15.467,2.347-31.467,2.347-47.787
+      C394.599,243.627,394.172,231.573,393.212,219.733z M373.266,256c0,22.933-1.813,45.867-5.333,68.587
+      c-17.173,13.547-35.307,25.813-54.293,36.8c-18.56,10.667-37.867,20.053-57.707,28.053c-19.84-8-39.147-17.387-57.707-28.053
+      c-18.987-10.987-37.12-23.253-54.293-36.8c-6.507-41.387-7.04-83.52-1.707-125.12c17.707-14.08,36.373-26.773,56-38.187
+      c18.667-10.773,37.973-20.16,57.92-28.16c19.84,8,39.04,17.493,57.6,28.16c19.52,11.307,38.293,24.107,55.893,38.187
+      C372.092,218.24,373.266,237.12,373.266,256z M364.519,168.64c-12.587-8.96-26.027-17.6-40.107-25.813
+      c-13.013-7.467-26.027-14.08-39.147-20.16c19.947-6.507,40.533-11.093,61.333-13.76
+      C354.386,128.213,360.359,148.267,364.519,168.64z M255.932,21.333c31.04,0,59.84,25.707,81.067,66.88
+      c-27.733,4.267-55.04,11.52-81.173,21.867c-26.133-10.24-53.333-17.493-81.067-21.653
+      C195.986,47.147,224.786,21.333,255.932,21.333z M165.479,108.587c20.907,2.667,41.493,7.36,61.547,13.867
+      c-13.12,6.08-26.24,12.8-39.467,20.373c-14.187,8.213-27.52,16.853-40.107,25.813C151.506,148.16,157.586,128,165.479,108.587z
+       M50.279,142.613c14.187-24.533,46.933-37.013,92.267-35.627c-9.813,26.133-16.64,53.333-20.48,81.067
+      c-20.053,16.32-38.507,34.56-54.827,54.613C43.132,204.693,35.346,168.427,50.279,142.613z M119.612,303.787
+      c-14.293-13.013-27.413-27.2-39.253-42.453c11.627-14.827,24.427-28.8,38.293-41.493c-0.853,11.84-1.387,23.893-1.387,36.267
+      C117.266,272.427,118.119,288.32,119.612,303.787z M50.279,380.053c-14.933-25.813-7.147-62.08,16.96-99.947
+      c16.853,20.693,35.947,39.573,56.747,56.213c5.013,29.12,12.8,55.68,22.72,79.04C101.266,417.6,65.319,406.187,50.279,380.053z
+       M150.119,356.053c11.84,8.213,24.213,16.213,37.333,23.787c13.12,7.573,26.133,14.08,39.147,20.16
+      c-18.56,5.973-37.653,10.453-56.96,13.227C161.319,394.773,154.812,375.68,150.119,356.053z M255.932,490.667
+      c-28.48,0-55.04-21.653-75.627-56.853c24-3.947,49.493-11.093,75.627-21.227c26.133,10.133,51.627,17.28,75.627,21.227
+      C310.972,469.013,284.412,490.667,255.932,490.667z M342.119,413.333c-19.307-2.773-38.4-7.253-56.96-13.227
+      c13.013-6.08,26.133-12.693,39.147-20.16c13.013-7.467,25.493-15.68,37.333-23.893
+      C356.946,375.68,350.439,394.88,342.119,413.333z M461.586,380.053c-15.04,26.133-50.987,37.44-96.427,35.307
+      c9.92-23.253,17.6-49.92,22.72-79.04c20.8-16.747,39.893-35.52,56.747-56.213C468.732,317.973,476.519,354.24,461.586,380.053z"
+            />
+            <path
+              d="M255.932,224c-23.573,0-42.667,19.093-42.667,42.667s19.093,42.667,42.667,42.667c23.573,0,42.667-19.093,42.667-42.667
+      S279.506,224,255.932,224z"
+            />
+          </g>
+        </g>
+      </g>
+    </svg>
+  ),
+  figma: (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      xmlnsXlink="http://www.w3.org/1999/xlink"
+      version="1.1"
+      id="Capa_1"
+      viewBox="0 0 512 512"
+      xmlSpace="preserve"
+    >
+      <g id="Group">
+        <g id="Rectangle_55_x5F_2">
+          <path d="M390.65,175.9c26.08-17.14,43.33-46.65,43.33-80.11C433.98,42.97,391,0,338.18,0H173.82C121,0,78.02,42.97,78.02,95.79    c0,33.46,17.25,62.97,43.33,80.11c-26.08,17.13-43.33,46.64-43.33,80.1s17.25,62.97,43.33,80.11    c-26.08,17.12-43.33,46.64-43.33,80.1c0,52.82,43.21,95.79,96.31,95.79c53.68,0,97.36-43.44,97.36-96.83v-88.34    c17.02,15.51,39.63,24.96,64.41,24.96h2.08c52.82,0,95.8-42.97,95.8-95.79C433.98,222.54,416.73,193.03,390.65,175.9z     M271.69,31.38h66.49c35.52,0,64.42,28.89,64.42,64.41s-28.9,64.42-64.42,64.42h-66.49V31.38z M109.4,95.79    c0-35.52,28.9-64.41,64.42-64.41h66.49v128.83h-66.49C138.3,160.21,109.4,131.31,109.4,95.79z M109.4,256    c0-35.52,28.9-64.41,64.42-64.41h66.49v128.83h-66.9C138.08,320.2,109.4,291.38,109.4,256z M240.31,415.17    c0,36.09-29.6,65.45-65.98,65.45c-35.8,0-64.93-28.89-64.93-64.41s28.9-64.42,64.42-64.42h66.49V415.17z M338.18,320.42h-2.08    c-35.52,0-64.41-28.9-64.41-64.42s28.89-64.41,64.41-64.41h2.08c35.52,0,64.42,28.89,64.42,64.41S373.7,320.42,338.18,320.42z" />
+        </g>
+        <g id="Rectangle_55_x5F_4">
+          <path d="M173.82,320.41c-0.14,0-0.27,0-0.41,0.01h66.9v-0.01H173.82z" />
+        </g>
+      </g>
+    </svg>
+  ),
   circle: (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -29,6 +106,54 @@ export const SVGs = {
           d="M27.25,4.655C20.996-1.571,10.88-1.546,4.656,4.706C-1.571,10.96-1.548,21.076,4.705,27.3
           c6.256,6.226,16.374,6.203,22.597-0.051C33.526,20.995,33.505,10.878,27.25,4.655z"
         />
+      </g>
+    </svg>
+  ),
+  hosting: (
+    <svg
+      id="_x31__x2C_5"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+    >
+      <g id="XMLID_1_">
+        <path d="m24 17.5c0 .66-.1 1.29-.28 1.89.01-.05.01-.09.01-.14 0-.41-.34-.75-.75-.75h-.58c.07-.32.1-.66.1-1s-.03-.68-.1-1h.58c.42 0 .75-.34.75-.75 0-.1-.02-.2-.06-.29.21.64.33 1.33.33 2.04z" />
+        <path d="m23.67 15.46c.04.09.06.19.06.29 0 .41-.33.75-.75.75h-.58c-.11-.54-.3-1.04-.57-1.5h1.15c.31 0 .58.19.69.46z" />
+        <path d="m22.98 18.5c.41 0 .75.34.75.75 0 .05 0 .09-.01.14s-.03.1-.05.15c-.11.27-.37.46-.69.46h-1.15c.27-.46.46-.96.57-1.5z" />
+        <path d="m21.83 15c-.44-.76-1.07-1.39-1.83-1.83v-1.15c0-.32-.19-.58-.46-.69 1.94.64 3.49 2.19 4.13 4.13-.11-.27-.38-.46-.69-.46z" />
+        <path d="m21.83 15c.27.46.46.96.57 1.5h-2.4v-1.5z" />
+        <path d="m20 18.5h2.4c-.11.54-.3 1.04-.57 1.5h-1.83z" />
+        <path d="m22.98 20c.32 0 .58-.19.69-.46-.64 1.94-2.19 3.49-4.13 4.13.27-.11.46-.37.46-.69v-1.15c.76-.44 1.39-1.07 1.83-1.83z" />
+        <path d="m20 21.83v1.15c0 .32-.19.58-.46.69-.05.02-.1.04-.15.05s-.09.01-.14.01c-.41 0-.75-.34-.75-.75v-.58c.54-.11 1.04-.3 1.5-.57z" />
+        <path d="m20 20v1.83c-.46.27-.96.46-1.5.57v-2.4z" />
+        <path d="m18.5 18.5h1.5v1.5h-1.5z" />
+        <path d="m18.5 16.5h1.5v2h-1.5z" />
+        <path d="m18.5 15h1.5v1.5h-1.5z" />
+        <path d="m20 13.17v1.83h-1.5v-2.4c.54.11 1.04.3 1.5.57z" />
+        <path d="m20 12.02v1.15c-.46-.27-.96-.46-1.5-.57v-.58c0-.41.34-.75.75-.75.05 0 .09 0 .14.01s.1.03.15.05c.27.11.46.37.46.69z" />
+        <path d="m16.5 18.5h2v1.5h-2z" />
+        <path d="m16.5 15h2v1.5h-2z" />
+        <path d="m16.5 22.4v.58c0 .42-.34.75-.75.75-.1 0-.2-.02-.29-.06-.27-.11-.46-.38-.46-.69v-1.15c.46.27.96.46 1.5.57z" />
+        <path d="m16.5 20v2.4c-.54-.11-1.04-.3-1.5-.57v-1.83z" />
+        <path d="m15 18.5h1.5v1.5h-1.5z" />
+        <path d="m15 16.5h1.5v2h-1.5z" />
+        <path d="m15 15h1.5v1.5h-1.5z" />
+        <path d="m16.5 12.6v2.4h-1.5v-1.83c.46-.27.96-.46 1.5-.57z" />
+        <path d="m16.5 12.02v.58c-.54.11-1.04.3-1.5.57v-1.15c0-.31.19-.58.46-.69.09-.04.19-.06.29-.06.41 0 .75.34.75.75z" />
+        <path d="m16.5 12.02c0-.41-.34-.75-.75-.75-.1 0-.2.02-.29.06.64-.21 1.33-.33 2.04-.33.66 0 1.29.1 1.89.28-.05-.01-.09-.01-.14-.01-.41 0-.75.34-.75.75v.58c-.32-.07-.66-.1-1-.1s-.68.03-1 .1z" />
+        <path d="m15.75 23.73c.41 0 .75-.33.75-.75v-.58c.32.07.66.1 1 .1s.68-.03 1-.1v.58c0 .41.34.75.75.75.05 0 .09 0 .14-.01-.6.18-1.23.28-1.89.28-.71 0-1.4-.12-2.04-.33.09.04.19.06.29.06z" />
+        <path d="m15 18.5v1.5h-1.83c-.27-.46-.46-.96-.57-1.5z" />
+        <path d="m15 15v1.5h-2.4c.11-.54.3-1.04.57-1.5z" />
+        <path d="m15 13.17c-.76.44-1.39 1.07-1.83 1.83h-1.15c-.32 0-.58.19-.69.46.64-1.94 2.19-3.49 4.13-4.13-.27.11-.46.38-.46.69z" />
+        <circle cx="13" cy="5" r="1" />
+        <path d="m12.02 15h1.15c-.27.46-.46.96-.57 1.5h-.58c-.41 0-.75-.34-.75-.75 0-.05 0-.09.01-.14s.03-.1.05-.15c.11-.27.37-.46.69-.46z" />
+        <path d="m12.02 18.5h.58c.11.54.3 1.04.57 1.5h-1.15c-.31 0-.58-.19-.69-.46-.04-.09-.06-.19-.06-.29 0-.41.34-.75.75-.75z" />
+        <path d="m13.17 20c.44.76 1.07 1.39 1.83 1.83v1.15c0 .31.19.58.46.69-1.94-.64-3.49-2.19-4.13-4.13.11.27.38.46.69.46z" />
+        <path d="m11.33 19.54c-.21-.64-.33-1.33-.33-2.04 0-.66.1-1.29.28-1.89-.01.05-.01.09-.01.14 0 .41.34.75.75.75h.58c-.07.32-.1.66-.1 1s.03.68.1 1h-.58c-.41 0-.75.34-.75.75 0 .1.02.2.06.29z" />
+        <circle cx="9" cy="5" r="1" />
+        <path d="m8.42 15c.41 0 .75.34.75.75s-.34.75-.75.75h-6.92v-1.5z" />
+        <circle cx="5" cy="5" r="1" />
+        <path d="m1.5 15v1.5h-.25c-.41 0-.75-.34-.75-.75s.34-.75.75-.75z" />
+        <path d="m2.75 1.5c-.69 0-1.25.56-1.25 1.25v4.75h15v-4.75c0-.69-.56-1.25-1.25-1.25zm7.51 21c.41 0 .75.34.75.75s-.34.75-.75.75h-7.51c-1.52 0-2.75-1.23-2.75-2.75v-18.5c0-1.52 1.23-2.75 2.75-2.75h12.5c1.52 0 2.75 1.23 2.75 2.75v5.5c0 .41-.34.75-.75.75h-15.75v6h-.25c-.41 0-.75.34-.75.75s.34.75.75.75h.25v4.75c0 .69.56 1.25 1.25 1.25z" />
       </g>
     </svg>
   ),
@@ -67,15 +192,11 @@ export const SVGs = {
     </svg>
   ),
   contactus: (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      xmlnsXlink="http://www.w3.org/1999/xlink"
-      viewBox="0 0 409.6 409.6"
-    >
-      <g>
-        <g>
-          <polygon points="0,170.685 87.716,258.401 252.713,156.887 151.214,321.9 238.935,409.6 409.6,0" />
-        </g>
+    <svg id="ghylp" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+      <g fill="rgb(0,0,0)">
+        <path d="m25.4 41.66c-.02345-.46173 31.4747-35.10183 33.13987-36.69008l-53.99987 28.12008a1.009 1.009 0 0 0 .12 1.83l20.7 7.44z" />
+        <path d="m59.74 6.53c-3.94355 4.328-28.15867 30.926-32.36 35.54l-.05.99c1.49808.54461 25.13 9.03 25.13 9.03a1.03989 1.03989 0 0 0 .85-.09 1.00627 1.00627 0 0 0 .48-.72c-.2882.43 6.82685-47.26164 5.95-44.75z" />
+        <path d="m25.29 43.92-.69 14.17a1.007 1.007 0 0 0 1.78.67994l9.04-11.20994c-1.31366-.46356-10.13-3.64-10.13-3.64z" />
       </g>
     </svg>
   ),
@@ -345,34 +466,34 @@ export const OurServicesText: OurServicesProps = {
       {
         title: "Website Development",
         article:
-          "We are focused on developing, from start to finish. Also you can provide us the existing design and we will create a website based on it. ",
-        icon: SVGs.ourservices,
+          "We are focused on developing your project from start to finish. In just 2 weeks you will receive a website prototype! After a little period, your website will shine on the Internet.",
+        icon: SVGs.websiteDevelopment,
         clarification: "We are experts in",
         statement: "-website development-",
       },
       {
-        title: "Website Development",
+        title: "Web Design",
         article:
-          "We are focused on developing, from start to finish. Also you can provide us the existing design and we will create a website based on it. ",
-        icon: SVGs.ourservices,
-        clarification: "We are experts in",
-        statement: "website development",
+          "We are ready to offer you the creation and updating of an existing website design. We'll help you revive your site within a few weeks.",
+        icon: SVGs.webDesign,
+        clarification: "We can easily provide you",
+        statement: "-crafty design-",
       },
       {
-        title: "Website Development",
+        title: "Web Support",
         article:
-          "We are focused on developing, from start to finish. Also you can provide us the existing design and we will create a website based on it. ",
-        icon: SVGs.ourservices,
-        clarification: "We are experts in",
-        statement: "website development",
+          "Now&Here is not only ready to help with the website creation, but we provide subscription based support. We maintain your website functionality and protect it from Ddos attacks.",
+        icon: SVGs.support,
+        clarification: "24/7 support is available to",
+        statement: "-protect and maintain-",
       },
       {
-        title: "Website Development",
+        title: "Hosting",
         article:
-          "We are focused on developing, from start to finish. Also you can provide us the existing design and we will create a website based on it. ",
-        icon: SVGs.ourservices,
-        clarification: "We are experts in",
-        statement: "website development",
+          "You don't need to think about hosting at all! Our team will take care of the site’s ranking in browsers and bring the site to the top.",
+        icon: SVGs.hosting,
+        clarification: "Be sure about the best",
+        statement: "-web appearance-",
       },
     ],
   },
@@ -423,6 +544,7 @@ export const LastProjectText: LastProjectProps = {
     name: "Autoblock",
     description: "anti-theft system",
     redirectImg: SVGs.arrowDown,
+    projLink: "https://www.avtoblock.com/",
   },
   ru: {
     number: "01.",
@@ -432,21 +554,80 @@ export const LastProjectText: LastProjectProps = {
     name: "Autoblock",
     description: "противоугонная система",
     redirectImg: SVGs.arrowDown,
+    projLink: "https://www.avtoblock.com/",
   },
 };
 
-export const WhoWeAreText = {
+export const WhoWeAreText: WhoWeAreProps = {
   en: {
     title: 'Who are the <span style="font-weight: 500;">Now&Here?</span>',
     article:
-      "We are a website agency with vivid and creative solutions. We would love to work with clients from all around the world!",
-    keywords: ["cool", "great"],
+      "We are a website agency with vivid and creative solutions. We would love to work with clients from all around the world! Here are the technologies we use: ",
+    imagesFirstLine: [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      SVGs.python,
+      SVGs.typescript,
+      SVGs.wordpress,
+      null,
+      null,
+      null,
+      null,
+    ],
+    imagesSecondLine: [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      SVGs.react,
+      SVGs.figma,
+      null,
+      null,
+      null,
+      null,
+      null,
+    ],
   },
   ru: {
     title: 'Кто такие <span style="font-weight: 500;">Now&Here?</span>',
     article:
       "Мы агентство с визуальными и красивыми решениями. Мы будем рады работать с клиентами из мира!",
-    keywords: ["круто", "красиво"],
+    imagesFirstLine: [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      SVGs.python,
+      SVGs.typescript,
+      SVGs.wordpress,
+      null,
+      null,
+      null,
+      null,
+    ],
+    imagesSecondLine: [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      SVGs.react,
+      SVGs.figma,
+      null,
+      null,
+      null,
+      null,
+      null,
+    ],
   },
 };
 
@@ -458,25 +639,26 @@ export const GetInTouchText: GetInTouchProps = {
     contacts: [
       {
         children: "nowandhere@agency.com",
-        link: "/gmail@gmail.com",
+        link: "mailto:nowandhere@agency.com",
       },
       {
         children: "+380 000 00 00 00",
-        link: "/instagram@nowandhere",
+        //Todo: add phone number
+        link: "tel:phoneNumber!!",
       },
     ],
     socials: [
       {
         children: SVGs.linkedin,
-        link: "/instagram@nowandhere",
+        link: "https://sk.linkedin.com/",
       },
       {
         children: SVGs.facebook,
-        link: "/instagram@nowandhere",
+        link: "https://www.facebook.com/",
       },
       {
         children: SVGs.telegram,
-        link: "/instagram@nowandhere",
+        link: "https://web.telegram.org/k/",
       },
     ],
     circle: {
@@ -519,7 +701,7 @@ export const GetInTouchText: GetInTouchProps = {
   },
 };
 
-export const ContactFormText = {
+export const ContactFormText: ContactFormProps = {
   en: {
     nameInput: {
       type: "text",
@@ -538,13 +720,14 @@ export const ContactFormText = {
     },
     textarea: {
       type: "text",
-      placeholder: "Subject",
+      placeholder: "Message",
       field: "messageInput",
     },
     button: {
       type: "submit",
       text: "Send",
       icon: SVGs.contactus,
+      thanks: "Thanks for your message. We will get back to you as soon as possible.",
     },
   },
   ru: {
@@ -565,13 +748,14 @@ export const ContactFormText = {
     },
     textarea: {
       type: "text",
-      placeholder: "Тема",
+      placeholder: "Сообщение",
       field: "messageInput",
     },
     button: {
       type: "submit",
       text: "Отправить",
       icon: SVGs.contactus,
+      thanks: "Спасибо!",
     },
   },
 };

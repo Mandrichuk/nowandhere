@@ -119,6 +119,7 @@ type LastProjectContent = {
   description: string;
   launch: string;
   redirectImg: React.ReactNode;
+  projLink: string
 };
 
 export type LastProjectProps = {
@@ -138,7 +139,6 @@ export type WhoWeAreText = {
   en: LanguageData;
   ru: LanguageData;
 };
-
 
 type Contact = {
   children: string;
@@ -168,4 +168,47 @@ export type CircularTextProps = {
   children: string;
   icon: React.ReactNode;
   color: string;
+};
+
+export type WhoWeAreTextItem = {
+  title: string;
+  article: string;
+  imagesFirstLine: (React.ReactNode | null)[];
+  imagesSecondLine: (React.ReactNode | null)[];
+};
+
+export type WhoWeAreProps = {
+  en: WhoWeAreTextItem;
+  ru: WhoWeAreTextItem;
+  sk?: WhoWeAreTextItem;
+  de?: WhoWeAreTextItem;
+};
+
+
+type InputField = {
+  type: string;
+  placeholder: string;
+  field: string;
+}
+
+type Button = {
+  type: string;
+  text: string;
+  icon: React.ReactNode;
+  thanks: string;
+}
+
+type ContactFormTextItem = {
+  nameInput: InputField;
+  emailInput: InputField;
+  subjectInput: InputField;
+  textarea: InputField;
+  button: Button;
+}
+
+export type ContactFormProps = {
+  en: ContactFormTextItem;
+  ru: ContactFormTextItem;
+  sk?: ContactFormTextItem;
+  de?: ContactFormTextItem;
 }

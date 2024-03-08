@@ -11,7 +11,7 @@ function Introduction({ lang }: IntroductionProps) {
 
   return (
     <section id="IntroductionSection" className="IntroductionSection">
-      <div id="servicesContainer" className="servicesContainer">
+      <a href="#Services" id="servicesContainer" className="servicesContainer">
         <div
           id="container-introduction"
           className="container container-introduction"
@@ -42,11 +42,11 @@ function Introduction({ lang }: IntroductionProps) {
             {introductionText.ourServices.bgImages.circleImg}
           </div>
         </div>
-      </div>
+      </a>
 
       <div className="secondSection">
         <div className="fastLinks">
-          <div id="lastProjectContainer" className="lastProjectContainer">
+          <a href="#LastProject" id="lastProjectContainer" className="lastProjectContainer">
             <div id="container-last-project" className="container">
               <div className="inner-padding">
                 <p className="name"></p>
@@ -68,9 +68,9 @@ function Introduction({ lang }: IntroductionProps) {
             <div data-anchor="lastProjectContainer" className="clickText">
               Click
             </div>
-          </div>
+          </a>
 
-          <div id="aboutUsContainer" className="aboutUsContainer">
+          <a href="#WhoWeAre" id="aboutUsContainer" className="aboutUsContainer">
             <div id="container-one" className="container">
               <div className="inner-padding ">
                 <p className="name"></p>
@@ -90,10 +90,10 @@ function Introduction({ lang }: IntroductionProps) {
             <div data-anchor="aboutUsContainer" className="clickText">
               Click
             </div>
-          </div>
+          </a>
         </div>
 
-        <div id="contactUsContainer" className="contactUsContainer">
+        <a href="#GetInTouch" id="contactUsContainer" className="contactUsContainer">
           <div id="container-one" className="container">
             <div className="inner-padding ">
               <p className="name"></p>
@@ -113,7 +113,7 @@ function Introduction({ lang }: IntroductionProps) {
           <div data-anchor="lastProjectContainer" className="clickText">
             Click
           </div>
-        </div>
+        </a>
       </div>
     </section>
   );

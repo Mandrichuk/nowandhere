@@ -16,6 +16,8 @@
       height: 100%;
       background-color: transparent;
       border: none;
+      transition: $transition;
+        border-radius: borderRadius(mobile);
 
       &:focus {
         outline: none;
@@ -31,4 +33,5 @@
   &:hover {
     transform: scale(0.99);
   }
+
 }

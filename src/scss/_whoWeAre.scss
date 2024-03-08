@@ -1,7 +1,8 @@
 .WhoWeAre {
   width: 100%;
   .coverContainer {
-    margin: $section-margin * 2;
+    overflow: hidden;
+    margin: calc($section-margin * 2) $section-margin;
     transition: $transition;
     @include Flex(column, start, start);
     background-color: color(custom-pink-gray);
@@ -19,10 +20,40 @@
         }
 
         .article {
-          font-size: fontSize(p);
-          font-weight: fontWeight(regular);
-          width: 70%;
-          margin-top: 50px;
+          font-size: calc(fontSize(p) + 5px);
+          font-weight: fontWeight(thin);
+          width: 300px;
+          line-height: 1.5; 
+          // margin: 80px 0 0 20px;
+          margin-top: 40px;
+        }
+      }
+    }
+    .allCircles {
+      aspect-ratio: 1 / 0.9;
+      @include Flex(column, center, end);
+      transform: rotate(-30deg);
+      gap: 10px;
+      width: 100%;
+      .firstCircleLine {
+        margin-right: 130px;
+      }
+
+      .circleLine {
+        gap: 10px;
+        @include Flex(row, center, center);
+        .circle {
+          @include Flex(row, center, center);
+          aspect-ratio: 1 / 1;
+          width: 90px;
+          border-radius: 999px;
+          border: 2px solid color(custom-pink);
+          transform: rotate(+30deg);
+
+          svg {
+            fill: color(custom-pink);
+            width: 55%;
+          }
         }
       }
     }

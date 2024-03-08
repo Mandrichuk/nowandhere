@@ -10,6 +10,7 @@ export interface InputProps extends Language {
 export interface ButtonProps extends Language {
   children: string;
   icon: React.ReactNode;
+  ref: React.RefObject<HTMLButtonElement>;
 }
 
 export interface ContactLinkProps {

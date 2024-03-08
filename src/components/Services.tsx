@@ -71,13 +71,13 @@ function Description({
     } else if (windowWidth < 1400) {
       return "+23vw";
     } else if (windowWidth < 1800) {
-      return "+17vw";
+      return "+18vw";
     } else if (windowWidth < 2000) {
       return "+18.5vw";
     } else if (windowWidth < 2500) {
       return "+14.5vw";
     }
-    return "+25vw";
+    return "+5vw";
   }
 
   const initialX = isVisible ? 0 : getVw();
@@ -95,7 +95,6 @@ function Description({
         <div className="text">
           <p className="title">{title}</p>
           <p className="article">{article}</p>
-          <p className="clarification">{clarification}</p>
         </div>
       </div>
     </motion.div>
@@ -143,9 +142,8 @@ function Statement({
       return "-25vw";
     } else if (windowWidth < 1400) {
       return "-23.5vw";
-    } 
-    else if (windowWidth < 1800) {
-      return "-18.5vw";
+    } else if (windowWidth < 1800) {
+      return "-18vw";
     } else if (windowWidth < 2000) {
       return "-15vw";
     } else if (windowWidth < 2500) {

@@ -29,16 +29,16 @@ function GetInTouch({ lang }: GetInTouchProps) {
             <div className="links">
               <div className="contacts">
                 {getInTouchText.contacts.map((contact, index) => (
-                  <div className="contact" key={`contact-${index}`}>
+                  <a href={contact.link} className="contact" key={`contact-${index}`}>
                     <ContactLink {...contact} />
-                  </div>
+                  </a>
                 ))}
               </div>
               <div className="socials">
                 {getInTouchText.socials.map((social, index) => (
-                  <div className="social" key={`social-${index}`}>
+                  <a href={social.link} target="_blank" className="social" key={`social-${index}`}>
                     <ContactLink {...social} />
-                  </div>
+                  </a>
                 ))}
               </div>
             </div>

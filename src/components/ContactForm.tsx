@@ -1,9 +1,6 @@
-import React from "react";
-
+import React, { useState, useRef } from "react";
 import { ContactFormProps } from "../lib/interfaces";
-
 import { ContactFormText } from "../constants/Index";
-
 import Input from "./Input";
 import Textarea from "./Textarea";
 import ButtonSubmit from "./Button";
@@ -12,9 +9,24 @@ function ContactForm({ lang }: ContactFormProps) {
   const contactFormText =
     ContactFormText[lang as keyof typeof ContactFormText] ||
     ContactFormText["en"];
+  const [form, setForm] = useState({
+    nameInput: "",
+    emailInput: "",
+    subjectInput: "",
+    messageInput: "",
+  });
+  const [isSent, setIsSent] = useState<boolean>(false);
+  const submitButtonRef = useRef<HTMLButtonElement>(null);
 
   function getValue(field: string, text: string) {
-    console.log(field, text);
+    setForm({ ...form, [field]: text });
+  }
+
+  function handleSubmit() {
+    setIsSent(true);
+    if (submitButtonRef.current) {
+      submitButtonRef.current.click();
+    }
   }
 
   return (
@@ -63,10 +75,20 @@ function ContactForm({ lang }: ContactFormProps) {
             devastation={false}
           />
         </div>
-        <div className="buttonSubmit">
-          <ButtonSubmit lang={lang} icon={contactFormText.button.icon}>
+        <div
+          onClick={handleSubmit}
+          className={`buttonSubmit ${isSent && "sent"}`}
+        >
+          <ButtonSubmit
+            ref={submitButtonRef}
+            lang={lang}
+            icon={contactFormText.button.icon}
+          >
             {contactFormText.button.text}
           </ButtonSubmit>
+        </div>
+        <div className={`thanksText ${isSent && "sent"}`}>
+          <p>{contactFormText.button.thanks}</p>
         </div>
       </div>
     </section>

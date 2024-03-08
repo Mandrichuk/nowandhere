@@ -162,6 +162,7 @@
             }
 
             .details {
+              transition: $transition;
               width: 100%;
               @include Flex(column, center, center);
 
@@ -185,10 +186,26 @@
           position: absolute;
           font-weight: fontWeight(semibold);
           font-size: fontSize(h2);
+          transition: $transition;
         }
 
         &:hover {
           transform: scale(0.99);
+          .container {
+            .inner-padding {
+              .details {
+                opacity: 0;
+                transform: scale(0.5);
+              }
+            }
+          }
+          .clickText {
+            opacity: 0.5;
+            position: absolute;
+            font-weight: fontWeight(semibold);
+            font-size: fontSize(h2);
+            transform: scale(1.1);
+          }
         }
       }
 
@@ -200,6 +217,7 @@
         aspect-ratio: 1 / 1;
         border-radius: 999px;
         color: white;
+        transition: $transition;
 
         @include Flex(column, center, center);
         overflow: hidden;
@@ -212,7 +230,7 @@
 
           .inner-padding {
             @include Flex(column, center, center);
-
+            transition: $transition;
             .running-text {
               display: none;
               opacity: 0;
@@ -227,6 +245,7 @@
             .details {
               width: 100%;
               @include Flex(column, center, center);
+              transition: $transition;
 
               .title {
                 font-weight: fontWeight(regular);
@@ -249,10 +268,26 @@
           position: absolute;
           font-weight: fontWeight(semibold);
           font-size: fontSize(h2);
+          transition: $transition;
         }
 
         &:hover {
           transform: scale(0.99);
+          .container {
+            .inner-padding {
+              .details {
+                opacity: 0;
+                transform: scale(0.5);
+              }
+            }
+          }
+          .clickText {
+            opacity: 0.5;
+            position: absolute;
+            font-weight: fontWeight(regular);
+            font-size: fontSize(h2);
+            transform: scale(1.1);
+          }
         }
       }
     }
@@ -290,6 +325,7 @@
         }
 
         .details {
+        transition: $transition;
           width: 100%;
           @include Flex(column, center, center);
 
@@ -314,11 +350,27 @@
       opacity: 0;
       position: absolute;
       font-weight: fontWeight(semibold);
-      font-size: fontSize(h2);
+      font-size: fontSize(h1);
+      transition: $transition;
     }
 
     &:hover {
       transform: scale(0.99);
+      .container {
+        .inner-padding {
+          .details {
+            opacity: 0;
+            transform: scale(0.5);
+          }
+        }
+      }
+      .clickText {
+        opacity: 0.5;
+        position: absolute;
+        font-weight: fontWeight(bold);
+        font-size: fontSize(h1);
+        transform: scale(1.1);
+      }
     }
   }
 }

@@ -18,7 +18,22 @@ function WhoWeAre({ lang }: WhoWeAreProps) {
           <div className="wrapper">
             <h1 className="title" dangerouslySetInnerHTML={titleWithStyle} />
             <p className="article">{whoWeAreText.article}</p>
-            
+          </div>
+        </div>
+        <div className="allCircles">
+          <div className="firstCircleLine circleLine">
+            {whoWeAreText.imagesFirstLine.map((image, index) => (
+              <div className="circle" key={`circle-${index}`}>
+                {image}
+              </div>
+            ))}
+          </div>
+          <div className="secondCircleLine circleLine">
+            {whoWeAreText.imagesSecondLine.map((image, index) => (
+              <div className="circle" key={`circle-${index}`}>
+                {image}
+              </div>
+            ))}
           </div>
         </div>
       </div>

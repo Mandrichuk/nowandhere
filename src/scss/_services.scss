@@ -13,6 +13,7 @@
 
       .description {
         height: 100%;
+        margin-right: 5px;
 
         color: color(custom-purple);
         border-radius: borderRadius(mobile);
@@ -40,6 +41,7 @@
       }
 
       .statement {
+        margin-left: 5px;
         @include Flex(column, center, center);
         height: 100%;
         background-color: color(custom-purple);

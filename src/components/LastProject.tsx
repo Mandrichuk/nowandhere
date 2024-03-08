@@ -9,7 +9,8 @@ function LastProject({ lang }: LastProjectProps) {
 
   return (
     <section id="LastProject" className="LastProject">
-      <div className="coverContainer">
+      
+      <a href={`${lastProjectText.projLink}`} target="_blank" className="coverContainer">
         <div className="inner-padding">
           <div className="project">
             <div className="number">{lastProjectText.number}</div>
@@ -32,7 +33,7 @@ function LastProject({ lang }: LastProjectProps) {
             </div>
           </div>
         </div>
-      </div>
+      </a >
     </section>
   );
 }

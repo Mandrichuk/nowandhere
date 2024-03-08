@@ -32,6 +32,30 @@
     .buttonSubmit {
       grid-row: 3 / 7;
       grid-column: 4 / 5;
+
+      &.sent {
+        display: none;
+      }
+    }
+
+    .thanksText {
+      color: color(custom-yellow);
+      font-size: fontSize(h4);
+      font-weight: fontWeight(regular);
+      display: none;
+      text-align: center;
+      height: 100%;
+      width: 100%;
+      grid-row: 3 / 7;
+      grid-column: 4 / 5;
+      transition: $transition;
+      &:hover {
+        transform: scale(0.99);
+      }
+
+      &.sent {
+        @include Flex(row, center, center);
+      }
     }
   }
 }
