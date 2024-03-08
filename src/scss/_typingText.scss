@@ -1,0 +1,17 @@
+.typing-animation {
+  font-size: fontSize(p);
+  overflow: hidden;
+  span {
+    min-height: 30px;
+    animation: typing-animation 0.5s steps(40, end);
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+  }
+}
+
+@keyframes typing-animation {
+  from {
+    width: 0;
+  }
+}

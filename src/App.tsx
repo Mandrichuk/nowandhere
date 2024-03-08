@@ -11,8 +11,7 @@ import Logo from "./components/Logo";
 import Services from "./components/Services";
 import WhatWeDo from "./components/WhatWeDo";
 import WhoWeAre from "./components/WhoWeAre";
-import CiricularText from "./components/CircularText";
-
+import TypingAnimation from "./components/TypingText";
 
 function Page() {
   const [lang, setLang] = useState<"en" | "ru" | "sk" | "de">("en");
@@ -27,6 +26,7 @@ function Page() {
 
   return (
     <>
+      {/* <TypingAnimation text="Hello, world!" /> */}
       <Logo lang={lang} changeLang={changeLang} />
       <Introduction lang={lang} />
       <WhatWeDo lang={lang} />

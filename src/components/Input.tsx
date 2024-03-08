@@ -30,15 +30,15 @@ function Input({
     }
   }, [devastation]);
 
+
   return (
     <div id={`input-${field}`} className="InputContainer">
-      <div className="cover">
+      <div className={`cover ${error && text.length <= 0 && "error"}`}>
         <input
           type={type}
           placeholder={`${placeholder}...`}
-          onChange={(e) => getValue(field, e.target.value)}
+          onChange={(e) => setText(e.target.value)}
         />
-        {error && <label>{inputAlertTextData.alert}</label>}
       </div>
     </div>
   );

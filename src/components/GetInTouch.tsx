@@ -2,14 +2,13 @@ import React from "react";
 
 import ContactLink from "./ContactLink";
 
-import { GetInTouchProps } from "../lib/interfaces";
+import { GetInTouchProps, LinkWrapperProps } from "../lib/interfaces";
 
 import { GetInTouchText as GetInTouchTextConstant } from "../constants/Index";
 
 import { toUpperCase } from "../utils/toUpperCase";
 
 import CircularText from "./CircularText";
-
 
 function GetInTouch({ lang }: GetInTouchProps) {
   const getInTouchText =
@@ -29,27 +28,47 @@ function GetInTouch({ lang }: GetInTouchProps) {
             <div className="links">
               <div className="contacts">
                 {getInTouchText.contacts.map((contact, index) => (
-                  <a href={contact.link} className="contact" key={`contact-${index}`}>
+                  <ContactLinkWrapper
+                    link={contact.link}
+                    key={`contact-${index}`}
+                  >
                     <ContactLink {...contact} />
-                  </a>
+                  </ContactLinkWrapper>
                 ))}
               </div>
               <div className="socials">
                 {getInTouchText.socials.map((social, index) => (
-                  <a href={social.link} target="_blank" className="social" key={`social-${index}`}>
+                  <SocialLinkWrapper link={social.link} key={`social-${index}`}>
                     <ContactLink {...social} />
-                  </a>
+                  </SocialLinkWrapper>
                 ))}
               </div>
             </div>
             <div className="circle">
-            <CircularText color="#fef073" icon={getInTouchText.circle.icon}>{getInTouchText.circle.text}</CircularText>
-         
+              <CircularText color="#fef073" icon={getInTouchText.circle.icon}>
+                {getInTouchText.circle.text}
+              </CircularText>
             </div>
           </div>
         </div>
       </div>
     </section>
+  );
+}
+
+function ContactLinkWrapper({ link, children }: LinkWrapperProps) {
+  return (
+    <a href={link} className="contact">
+      {children}
+    </a>
+  );
+}
+
+function SocialLinkWrapper({ link, children }: LinkWrapperProps) {
+  return (
+    <a href={link} className="social">
+      {children}
+    </a>
   );
 }
 

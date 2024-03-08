@@ -196,6 +196,7 @@ type Button = {
   text: string;
   icon: React.ReactNode;
   thanks: string;
+  sending: string;
 }
 
 type ContactFormTextItem = {
@@ -211,4 +212,8 @@ export type ContactFormProps = {
   ru: ContactFormTextItem;
   sk?: ContactFormTextItem;
   de?: ContactFormTextItem;
+}
+
+export type TypingAnimationProps = {
+  children: string;
 }

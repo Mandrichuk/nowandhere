@@ -23,8 +23,7 @@
           font-size: calc(fontSize(p) + 5px);
           font-weight: fontWeight(thin);
           width: 300px;
-          line-height: 1.5; 
-          // margin: 80px 0 0 20px;
+          line-height: 1.5;
           margin-top: 40px;
         }
       }
@@ -37,6 +36,14 @@
       width: 100%;
       .firstCircleLine {
         margin-right: 130px;
+      }
+
+      .firstCircleLine {
+        animation: leftMovement 20s linear infinite;
+      }
+
+      .secondCircleLine {
+        animation: leftMovement 10s linear infinite;
       }
 
       .circleLine {
@@ -61,5 +68,29 @@
     &:hover {
       transform: scale(0.99);
     }
+  }
+}
+
+@keyframes leftMovement {
+  0% {
+    transform: translateX(0%);
+  }
+  50% {
+    transform: translateX(-20%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes rightMovement {
+  0% {
+    transform: translateX(0%);
+  }
+  50% {
+    transform: translateX(+20%);
+  }
+  100% {
+    transform: translateX(0%);
   }
 }

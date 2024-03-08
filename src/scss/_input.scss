@@ -8,7 +8,6 @@
     flex: 1;
     border-radius: borderRadius(mobile);
     input {
-
       color: color(custom-yellow);
       font-size: fontSize(p);
       padding: 10px 25px;
@@ -17,7 +16,7 @@
       background-color: transparent;
       border: none;
       transition: $transition;
-        border-radius: borderRadius(mobile);
+      border-radius: borderRadius(mobile);
 
       &:focus {
         outline: none;
@@ -28,10 +27,25 @@
         color: color(custom-yellow);
       }
     }
+
+    &.error {
+      border: 1.5px solid color(custom-yellow);
+
+      animation: pulse .8s ease-in-out 0s 2.5;
+    }
   }
 
   &:hover {
     transform: scale(0.99);
   }
+}
 
+@keyframes pulse {
+  0% {
+    border: 1.5px solid rgba(color(custom-yellow), 0.1);
+  }
+
+  100% {
+    border: 1.5px solid color(custom-yellow);
+  }
 }

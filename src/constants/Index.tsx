@@ -570,6 +570,7 @@ export const WhoWeAreText: WhoWeAreProps = {
       null,
       null,
       null,
+      null,
       SVGs.python,
       SVGs.typescript,
       SVGs.wordpress,
@@ -585,10 +586,11 @@ export const WhoWeAreText: WhoWeAreProps = {
       null,
       null,
       null,
+      null,
+      null,
+      null,
       SVGs.react,
       SVGs.figma,
-      null,
-      null,
       null,
       null,
       null,
@@ -644,7 +646,7 @@ export const GetInTouchText: GetInTouchProps = {
       {
         children: "+380 000 00 00 00",
         //Todo: add phone number
-        link: "tel:phoneNumber!!",
+        link: "tel:+380 000 00 00 00",
       },
     ],
     socials: [
@@ -677,7 +679,7 @@ export const GetInTouchText: GetInTouchProps = {
       },
       {
         children: "+380 000 00 00 00",
-        link: "/instagram@nowandhere",
+        link: "/+380 000 00 00 00",
       },
     ],
     socials: [
@@ -728,6 +730,7 @@ export const ContactFormText: ContactFormProps = {
       text: "Send",
       icon: SVGs.contactus,
       thanks: "Thanks for your message. We will get back to you as soon as possible.",
+      sending: "Sending...",
     },
   },
   ru: {
@@ -756,6 +759,7 @@ export const ContactFormText: ContactFormProps = {
       text: "Отправить",
       icon: SVGs.contactus,
       thanks: "Спасибо!",
+      sending: "Sending...",
     },
   },
 };

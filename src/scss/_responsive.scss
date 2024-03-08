@@ -824,6 +824,7 @@
           }
         }
         .allCircles {
+          margin-left: 100px;
           aspect-ratio: 1 / 0.7;
           @include Flex(column, center, end);
           transform: rotate(-30deg);

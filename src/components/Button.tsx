@@ -3,7 +3,7 @@ import React from "react";
 import { ButtonProps } from "../lib/interfaces";
 import { ContactFormText } from "../constants/Index";
 
-function ButtonSubmit({ children, icon, lang, ref }: ButtonProps) {
+function ButtonSubmit({ children, icon, lang }: ButtonProps) {
   const contactFormText =
     ContactFormText[lang as keyof typeof ContactFormText] ||
     ContactFormText["en"];

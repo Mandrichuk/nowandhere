@@ -29,12 +29,8 @@ function Textarea({
 
   return (
     <div id={`input-${field}`} className="TextareaContainer">
-      <div className="cover">
-        <textarea
-          placeholder={`${placeholder}...`}
-          onChange={changeText}
-        />
-        {error && <label>{inputAlertTextData.alert}</label>}
+      <div className={`cover ${error && text.length <= 0 && "error"}`}>
+        <textarea placeholder={`${placeholder}...`} onChange={changeText} />
       </div>
     </div>
   );

@@ -4,13 +4,18 @@ import { LastProjectProps } from "../lib/interfaces";
 
 import { LastProjectText } from "../constants/Index";
 
+import TypingText from "./TypingText";
+
 function LastProject({ lang }: LastProjectProps) {
   const lastProjectText = LastProjectText[lang] || LastProjectText["en"];
 
   return (
     <section id="LastProject" className="LastProject">
-      
-      <a href={`${lastProjectText.projLink}`} target="_blank" className="coverContainer">
+      <a
+        href={`${lastProjectText.projLink}`}
+        target="_blank"
+        className="coverContainer"
+      >
         <div className="inner-padding">
           <div className="project">
             <div className="number">{lastProjectText.number}</div>
@@ -29,11 +34,17 @@ function LastProject({ lang }: LastProjectProps) {
               </div>
             </div>
             <div className="launch">
-              <a href={`${lastProjectText.launch}`}>{lastProjectText.launch}</a>
+              <span
+                onClick={() =>
+                  window.open(`${lastProjectText.launch}`, "_blank")
+                }
+              > 
+                <TypingText>{lastProjectText.launch}</TypingText>
+              </span>
             </div>
           </div>
         </div>
-      </a >
+      </a>
     </section>
   );
 }
