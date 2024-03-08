@@ -63,9 +63,9 @@ function Description({
     if (windowWidth < 410) {
       return "+24vw";
     } else if (windowWidth < 420) {
-      return "+21vw";
+      return "+18vw";
     } else if (windowWidth < 950) {
-      return "+25vw";
+      return "+21vw";
     } else if (windowWidth < 1100) {
       return "+25vw";
     } else if (windowWidth < 1400) {
@@ -149,7 +149,7 @@ function Statement({
     } else if (windowWidth < 2500) {
       return "-14.5vw";
     }
-    return "-25vw";
+    return "-5vw";
   }
 
   const initialX = isVisible ? 0 : getVw();

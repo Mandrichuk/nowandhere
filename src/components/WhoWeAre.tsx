@@ -18,6 +18,7 @@ function WhoWeAre({ lang }: WhoWeAreProps) {
           <div className="wrapper">
             <h1 className="title" dangerouslySetInnerHTML={titleWithStyle} />
             <p className="article">{whoWeAreText.article}</p>
+            <p className="details">{whoWeAreText.details}</p>
           </div>
         </div>
         <div className="allCircles">

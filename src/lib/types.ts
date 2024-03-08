@@ -173,6 +173,7 @@ export type CircularTextProps = {
 export type WhoWeAreTextItem = {
   title: string;
   article: string;
+  details: string;
   imagesFirstLine: (React.ReactNode | null)[];
   imagesSecondLine: (React.ReactNode | null)[];
 };
