@@ -119,7 +119,7 @@ type LastProjectContent = {
   description: string;
   launch: string;
   redirectImg: React.ReactNode;
-  projLink: string
+  projLink: string;
 };
 
 export type LastProjectProps = {
@@ -188,12 +188,11 @@ export type WhoWeAreProps = {
   de?: WhoWeAreTextItem;
 };
 
-
 type InputField = {
   type: string;
   placeholder: string;
   field: string;
-}
+};
 
 type Button = {
   type: string;
@@ -201,7 +200,7 @@ type Button = {
   icon: React.ReactNode;
   thanks: string;
   sending: string;
-}
+};
 
 type ContactFormTextItem = {
   nameInput: InputField;
@@ -209,15 +208,20 @@ type ContactFormTextItem = {
   subjectInput: InputField;
   textarea: InputField;
   button: Button;
-}
+};
 
 export type ContactFormProps = {
   en: ContactFormTextItem;
   ru: ContactFormTextItem;
   sk?: ContactFormTextItem;
   de?: ContactFormTextItem;
-}
+};
 
 export type TypingAnimationProps = {
   children: string;
-}
+};
+
+export type SEOProps = {
+  title: string;
+  description: string;
+};

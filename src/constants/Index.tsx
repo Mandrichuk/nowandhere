@@ -8,6 +8,7 @@ import {
   type GetInTouchProps,
   type WhoWeAreProps,
   type ContactFormProps,
+  type SEOProps,
 } from "../lib/types";
 
 import LastProject from "../assets/LastProject.png";
@@ -371,6 +372,12 @@ export const SVGs = {
   ),
 };
 
+export const SEOText: SEOProps = {
+  title: "Website Agency - Order a website",
+  description:
+    "Get yourself a website within a few weeks! Agency 'Now&Here' is all about Website Development, Web Design, Site Maintenance, and Hosting Services. We are based in Europe.",
+};
+
 export const InputAlertText: InputAlert = {
   ru: {
     alert: "*Заполните поле",
@@ -651,13 +658,13 @@ export const GetInTouchText: GetInTouchProps = {
     label: "Contact us!",
     contacts: [
       {
-        children: "nowandhere@agency.com",
-        link: "mailto:nowandhere@agency.com",
+        children: "contact@nowandhere.agency",
+        link: "mailto:contact@nowandhere.agency",
         type: "email",
       },
       {
-        children: "+380 000 00 00 00",
-        link: "tel:+380 000 00 00 00",
+        children: "+380 68 804 65 95",
+        link: "tel:+380 68 804 65 95",
         type: "phone",
       },
     ],

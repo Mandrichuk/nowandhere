@@ -18,7 +18,7 @@ function WhatWeDo({ lang }: WhatWeDoProps) {
         <div className="inner-padding">
           <p className="name">{toUpperCase(WhatWeDoText.name)}</p>
           <div className="mainSection">
-            <p
+            <h2
               className="title"
               dangerouslySetInnerHTML={{
                 __html: italicText(WhatWeDoText.title),

@@ -18,7 +18,7 @@ function Logo({ lang }: LogoProps) {
 
   return (
     <section id="Logo" className="Logo">
-      <div
+      <h1
         id="logoName"
         className="name"
         dangerouslySetInnerHTML={titleWithStyle}

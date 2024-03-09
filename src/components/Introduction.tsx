@@ -17,11 +17,11 @@ function Introduction({ lang }: IntroductionProps) {
           className="container container-introduction"
         >
           <div className="inner-padding inner-padding-introduction">
-            <p className="name">{introductionText.ourServices.name}</p>
+            <h2 className="name">{introductionText.ourServices.name}</h2>
 
-            <div className="running-text">
+            <h2 className="running-text">
               {introductionText.ourServices.runningText}
-            </div>
+            </h2>
 
             <div className="details">
               <p className="title">{introductionText.ourServices.title}</p>

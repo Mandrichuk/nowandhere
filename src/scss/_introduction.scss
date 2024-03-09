@@ -21,6 +21,7 @@
 
         .name {
           font-size: calc(fontSize(p) + 3px);
+          font-weight: fontWeight(regular);
         }
 
         .running-text {

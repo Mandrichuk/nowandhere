@@ -16,8 +16,8 @@ function WhoWeAre({ lang }: WhoWeAreProps) {
       <div className="coverContainer">
         <div className="inner-padding">
           <div className="wrapper">
-            <h1 className="title" dangerouslySetInnerHTML={titleWithStyle} />
-            <p className="article">{whoWeAreText.article}</p>
+            <h2 className="title" dangerouslySetInnerHTML={titleWithStyle} />
+            <h3 className="article">{whoWeAreText.article}</h3>
             <p className="details">{whoWeAreText.details}</p>
           </div>
         </div>

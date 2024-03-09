@@ -93,7 +93,7 @@ function Description({
       <div className="inner-padding">
         <div className="icon">{icon}</div>
         <div className="text">
-          <p className="title">{title}</p>
+          <h2 className="title">{title}</h2>
           <p className="article">{article}</p>
         </div>
       </div>
