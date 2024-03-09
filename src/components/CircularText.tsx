@@ -3,7 +3,7 @@ import CircleType from "circletype";
 
 import { CircularTextProps } from "../lib/types";
 
-function CircularText({ children, icon, color }: CircularTextProps) {
+function CircularText({ children, icon, color, link }: CircularTextProps) {
   const textRef = useRef<HTMLParagraphElement>(null);
 
   useEffect(() => {
@@ -23,14 +23,14 @@ function CircularText({ children, icon, color }: CircularTextProps) {
   }, []);
 
   return (
-    <div className="CiricularTextContainer">
+    <a href={`#${link}`} className="CiricularTextContainer">
       <div className="circular-text">
         <p className="text" ref={textRef}>
           {children}
         </p>
         <div className="arrow" style={{ fill: color }}>{icon}</div>
       </div>
-    </div>
+    </a>
   );
 }
 

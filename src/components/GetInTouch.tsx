@@ -45,7 +45,7 @@ function GetInTouch({ lang }: GetInTouchProps) {
               </div>
             </div>
             <div className="circle">
-              <CircularText color="#fef073" icon={getInTouchText.circle.icon}>
+              <CircularText color="#fef073" icon={getInTouchText.circle.icon} link="ContactForm">
                 {getInTouchText.circle.text}
               </CircularText>
             </div>

@@ -26,7 +26,7 @@ function WhatWeDo({ lang }: WhatWeDoProps) {
             />
 
             <div className="circle">
-              <CircularText color="#8985E0" icon={WhatWeDoText.circle.icon}>
+              <CircularText color="#8985E0" icon={WhatWeDoText.circle.icon} link="Services">
                 {WhatWeDoText.circle.text}
               </CircularText>
             </div>

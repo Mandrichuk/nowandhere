@@ -143,11 +143,13 @@ export type WhoWeAreText = {
 type Contact = {
   children: string;
   link: string;
+  type: string;
 };
 
 type Social = {
   children: React.ReactNode;
   link: string;
+  type: string;
 };
 
 type GetInTouchContent = {
@@ -168,6 +170,7 @@ export type CircularTextProps = {
   children: string;
   icon: React.ReactNode;
   color: string;
+  link: string;
 };
 
 export type WhoWeAreTextItem = {

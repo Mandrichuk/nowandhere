@@ -3,6 +3,7 @@
   width: 100%;
   transition: $transition;
   .cover {
+    transition: $transition;
     margin: $section-margin;
     border: 1.5px solid color(custom-yellow);
     border-radius: borderRadius(mobile);
@@ -11,22 +12,80 @@
     @include Flex(row, center, center);
 
     .text {
+      transition: $transition;
       font-size: fontSize(p);
       color: color(custom-yellow);
-
     }
 
     .icon {
       width: 25px;
+      transition: $transition;
 
       svg {
+        transition: $transition;
         height: 100%;
         fill: color(custom-yellow);
       }
     }
-  }
+    &:hover {
+      background-color: color(custom-yellow);
+      .text {
+        font-weight: fontWeight(semibold);
+        color: color(custom-yellow-gray);
+      }
 
-  &:hover {
-    transform: scale(0.99);
+      .icon {
+        width: 30px;
+
+        svg {
+          height: 100%;
+          fill: color(custom-yellow-gray);
+        }
+      }
+    }
+
+    &.reversed { 
+      transition: $transition;
+      margin: $section-margin;
+      border: 1.5px solid color(custom-yellow);
+      border-radius: borderRadius(mobile);
+      background-color: color(custom-yellow);
+      height: 55px;
+      @include Flex(row, center, center);
+
+      .text {
+        transition: $transition;
+        font-size: fontSize(p);
+        font-weight: fontWeight(semibold);
+        color: color(custom-yellow-gray);
+      }
+
+      .icon {
+        width: 25px;
+        transition: $transition;
+
+        svg {
+          transition: $transition;
+          height: 100%;
+          fill: color(custom-yellow-gray);
+        }
+      }
+      &:hover {
+        background-color: color(custom-yellow-gray);
+        .text {
+          font-weight: fontWeight(regular);
+          color: color(custom-yellow);
+        }
+
+        .icon {
+          width: 30px;
+
+          svg {
+            height: 100%;
+            fill: color(custom-yellow-gray);
+          }
+        }
+      }
+    }
   }
 }

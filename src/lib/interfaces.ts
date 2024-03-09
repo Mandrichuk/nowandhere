@@ -15,6 +15,7 @@ export interface ButtonProps extends Language {
 export interface ContactLinkProps {
   children: string | React.ReactNode;
   link: string;
+  type: string;
 }
 
 export interface Language {
