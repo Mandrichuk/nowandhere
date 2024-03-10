@@ -58,7 +58,7 @@ function GetInTouch({ lang }: GetInTouchProps) {
 
 function ContactLinkWrapper({ link, children }: LinkWrapperProps) {
   return (
-    <a href={link} className="contact">
+    <a href={link} target="_blank" className="contact">
       {children}
     </a>
   );
@@ -66,7 +66,7 @@ function ContactLinkWrapper({ link, children }: LinkWrapperProps) {
 
 function SocialLinkWrapper({ link, children }: LinkWrapperProps) {
   return (
-    <a href={link} className="social">
+    <a href={link} target="_blank" className="social">
       {children}
     </a>
   );
