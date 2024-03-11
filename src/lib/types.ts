@@ -224,4 +224,5 @@ export type TypingAnimationProps = {
 export type SEOProps = {
   title: string;
   description: string;
+  logo: string;
 };

@@ -29,6 +29,9 @@ function Page() {
     <>
       <title>{SEOText.title}</title>
       <meta name="description" content={SEOText.description} />
+      <meta property="og:image" content={SEOText.logo} />
+
+
       <Logo lang={lang} changeLang={changeLang} />
       <Introduction lang={lang} />
       <WhatWeDo lang={lang} />

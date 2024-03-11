@@ -12,9 +12,11 @@ import {
 } from "../lib/types";
 
 import LastProject from "../assets/LastProject.png";
+import logo from "../assets/nowandhere.jpg";
 
 export const PNGs = {
   LastProject,
+  logo,
 };
 
 export const SVGs = {
@@ -391,6 +393,7 @@ export const SEOText: SEOProps = {
   title: "Website Agency - Order a website",
   description:
     "Get yourself a website within a few weeks! Agency 'Now And Here' is all about Website Development, Web Design, Site Maintenance, and Hosting Services. We are based in Europe.",
+  logo: "../assets/nowandhere.jpg",
 };
 
 export const InputAlertText: InputAlert = {
@@ -686,7 +689,7 @@ export const GetInTouchText: GetInTouchProps = {
     socials: [
       {
         children: SVGs.whatsapp,
-        link: "https://wa.me/359879841713",
+        link: "https://wa.me/380688046595",
         type: "sosial",
       },
       {
@@ -716,8 +719,8 @@ export const GetInTouchText: GetInTouchProps = {
         type: "email",
       },
       {
-        children: "+380 000 00 00 00",
-        link: "/+380 000 00 00 00",
+        children: "+380 68 804 65 95",
+        link: "tel:+380 68 804 65 95",
         type: "phone",
       },
     ],
