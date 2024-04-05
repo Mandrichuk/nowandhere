@@ -32,7 +32,7 @@ export interface GetInTouchProps extends Language {}
 
 export interface IntroductionProps extends Language {}
 
-export interface LastProjectProps extends Language {}
+export interface ProjectProps extends Language {}
 
 export interface WhoWeAreProps extends Language {}
 

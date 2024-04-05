@@ -11,6 +11,7 @@ import Logo from "./components/Logo";
 import Services from "./components/Services";
 import WhatWeDo from "./components/WhatWeDo";
 import WhoWeAre from "./components/WhoWeAre";
+import NextLevelFitness from "./components/NextLevelFitness";
 
 import { SEOText } from "./constants/Index";
 
@@ -29,14 +30,13 @@ function Page() {
     <>
       <title>{SEOText.title}</title>
       <meta name="description" content={SEOText.description} />
-      <meta property="og:image" content={SEOText.logo} />
-
 
       <Logo lang={lang} changeLang={changeLang} />
       <Introduction lang={lang} />
       <WhatWeDo lang={lang} />
       <Services lang={lang} />
       <LastProject lang={lang} />
+      <NextLevelFitness lang={lang} />
       <WhoWeAre lang={lang} />
       <GetInTouch lang={lang} />
       <ContactForm lang={lang} />

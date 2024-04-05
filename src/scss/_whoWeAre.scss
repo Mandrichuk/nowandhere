@@ -12,6 +12,7 @@
     .inner-padding {
       position: relative;
       .wrapper {
+        margin-top: 20px;
         .title {
           text-align: center;
           width: 100%;
@@ -19,7 +20,8 @@
           font-weight: fontWeight(regular);
         }
 
-        .article, .details {
+        .article,
+        .details {
           font-size: calc(fontSize(p) + 5px);
           font-weight: fontWeight(thin);
           width: 300px;

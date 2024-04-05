@@ -226,3 +226,19 @@ export type SEOProps = {
   description: string;
   logo: string;
 };
+
+type NextLevelFitnessTextDetails = {
+  number: string;
+  launch: string;
+  logo: React.ReactNode; 
+  name: string;
+  redirectImg: React.ReactNode;
+  projLink: string;
+};
+
+export type NextLevelFitnessProps = {
+  en: NextLevelFitnessTextDetails;
+  ru: NextLevelFitnessTextDetails;
+  sk?: NextLevelFitnessTextDetails;
+  de?: NextLevelFitnessTextDetails;
+};

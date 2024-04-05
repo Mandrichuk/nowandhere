@@ -9,14 +9,17 @@ import {
   type WhoWeAreProps,
   type ContactFormProps,
   type SEOProps,
+  type NextLevelFitnessProps,
 } from "../lib/types";
 
 import LastProject from "../assets/LastProject.png";
 import logo from "../assets/nowandhere.jpg";
+import NextLevelFitness from "../assets/nextLevelFitness.png";
 
 export const PNGs = {
   LastProject,
   logo,
+  NextLevelFitness,
 };
 
 export const SVGs = {
@@ -575,7 +578,7 @@ export const LastProjectText: LastProjectProps = {
     name: "Autoblock",
     description: "anti-theft system",
     redirectImg: SVGs.arrowDown,
-    projLink: "https://www.avtoblock.com/",
+    projLink: "https://avtoblock.nowandhere.agency/",
   },
   ru: {
     number: "01.",
@@ -585,7 +588,26 @@ export const LastProjectText: LastProjectProps = {
     name: "Autoblock",
     description: "противоугонная система",
     redirectImg: SVGs.arrowDown,
-    projLink: "https://www.avtoblock.com/",
+    projLink: "https://avtoblock.nowandhere.agency/",
+  },
+};
+
+export const nextLevelFitnessText: NextLevelFitnessProps = {
+  en: {
+    number: "02.",
+    launch: "Launch project",
+    logo: PNGs.NextLevelFitness,
+    name: "NEXT LEVEL FITNESS",
+    redirectImg: SVGs.arrowDown,
+    projLink: "https://77fitness.nowandhere.agency/en",
+  },
+  ru: {
+    number: "02.",
+    launch: "Запустить проект",
+    logo: PNGs.NextLevelFitness,
+    name: "NEXT LEVEL FITNESS",
+    redirectImg: SVGs.arrowDown,
+    projLink: "https://77fitness.nowandhere.agency/en",
   },
 };
 

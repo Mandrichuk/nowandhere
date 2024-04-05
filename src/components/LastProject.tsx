@@ -1,12 +1,12 @@
 import React from "react";
 
-import { LastProjectProps } from "../lib/interfaces";
+import { ProjectProps } from "../lib/interfaces";
 
 import { LastProjectText } from "../constants/Index";
 
 import TypingText from "./TypingText";
 
-function LastProject({ lang }: LastProjectProps) {
+function LastProject({ lang }: ProjectProps) {
   const lastProjectText = LastProjectText[lang] || LastProjectText["en"];
 
   return (

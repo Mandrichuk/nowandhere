@@ -1,0 +1,66 @@
+.NextLevelFitness {
+  cursor: pointer;
+  width: 100%;
+  .coverContainer {
+    // aspect-ratio: 1 / 1.6;
+    transition: $transition;
+    @include Flex(column, center, center);
+    margin: $section-margin;
+    background-color: #0d0d0d;
+    border-radius: borderRadius(mobile);
+    color: #097fd9;
+
+    .project {
+      @include Flex(column, start, center);
+      height: 100%;
+      .number {
+        font-size: fontSize(p);
+        font-weight: fontWeight(bold);
+      }
+
+      .projectDetails {
+        margin: 3rem 0 3rem 0;
+        height: 100%;
+        width: 100%;
+        @include Flex(column, center, center);
+
+        .text {
+          @include Flex(column, center, center);
+
+          .name {
+            font-weight: 100;
+            font-size: clamp(30px, 4.5vw, 50px);
+            color: white;
+          }
+
+          .description {
+            font-weight: fontWeight(bold);
+            font-size: calc(fontSize(p) + 3px);
+            color: color(custom-red);
+            position: absolute;
+            margin: 130px 0 0 160px;
+          }
+        }
+
+        .logo {
+          width: 250px;
+          margin-bottom: 50px;
+
+          img {
+            width: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+
+      .launch {
+        font-size: fontSize(p);
+        font-weight: fontWeight(bold);
+      }
+    }
+
+    &:hover {
+      transform: scale(0.99);
+    }
+  }
+}
